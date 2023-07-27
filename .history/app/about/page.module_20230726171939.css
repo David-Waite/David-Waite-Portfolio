@@ -1,0 +1,6 @@
+.imageContainer {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  box-shadow: #2c2c2c 15px 15px 0px -3px, #3ab8ff 15px 15px;
+}

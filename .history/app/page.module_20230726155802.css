@@ -1,0 +1,63 @@
+.main {
+  margin: 0 30px;
+}
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 120px 0px;
+}
+
+.headingContainer h1 {
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 4px 40px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.headingContainer p {
+  color: var(--grey);
+  max-width: 550px;
+  text-align: center;
+  line-height: 27px;
+}
+
+.selectContainer {
+  display: flex;
+  position: relative;
+  width: 117px;
+}
+.select {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+  color: var(--black);
+  border: 2px solid var(--primary);
+  border-radius: 3px;
+  padding: 4px 8px;
+  background-color: var(--background);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.select svg {
+  font-size: 10px;
+  color: var(--primary);
+}
+
+.dropdown {
+  position: absolute;
+  top: 38px;
+  color: var(--grey);
+  width: 100%;
+  font-size: 18px;
+  border: 2px solid var(--grey);
+  border-radius: 3px;
+  padding: 4px 8px;
+  background-color: var(--background);
+  margin-bottom: 8px;
+}

@@ -1,0 +1,119 @@
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.projectsCard {
+  background-color: var(--primary);
+  height: calc((100vw / 3) / 16 * 9);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectContainer {
+  position: relative;
+  height: calc(100% - 120px);
+  width: calc(100% - 168px);
+  overflow: visible;
+}
+.projectImages {
+  object-fit: contain;
+  z-index: 0;
+  transition: 0.4s;
+  border-radius: 3px;
+}
+.projectInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.projectsCard h2 {
+  margin-top: auto;
+  text-align: center;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.projectsCard p {
+  font-size: 18px;
+  text-align: center;
+  margin: 8px 30px 0 30px;
+  color: var(--white);
+  font-weight: 300;
+  margin-bottom: auto;
+}
+
+.madeWith {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  color: #a7a7a7;
+  font-size: 14.4px;
+}
+
+.contaner:hover .projectImages {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.contaner:hover .projectInfo {
+  opacity: 1;
+}
+
+@media (max-width: 1700px) {
+  .projectContainer {
+    position: relative;
+    height: calc(100% - 68px);
+    width: calc(100% - 82px);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1300px) {
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .projectsCard {
+    background-color: var(--primary);
+    height: calc((100vw / 2) / 16 * 9);
+  }
+}
+
+@media (max-width: 768px) {
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .projectsCard {
+    background-color: var(--primary);
+    height: calc((100vw) / 16 * 9);
+    border-radius: 30px;
+  }
+
+  .projectContainer {
+    position: relative;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+  }
+}

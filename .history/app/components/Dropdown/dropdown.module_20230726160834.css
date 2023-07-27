@@ -1,0 +1,47 @@
+.selectContainer {
+  display: flex;
+  position: relative;
+  width: 116px;
+}
+.select {
+  z-index: 2;
+  top: -40px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+  color: var(--black);
+  border: 2px solid var(--primary);
+  border-radius: 3px;
+  padding: 4px 8px;
+  background-color: var(--background);
+  margin-bottom: 8px;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.select:hover {
+  background-color: var(--primary);
+}
+
+.select svg {
+  font-size: 10px;
+  color: var(--primary);
+}
+
+.dropdown {
+  position: absolute;
+  z-index: 1;
+  color: var(--grey);
+  width: 100%;
+  font-size: 18px;
+  border: 2px solid var(--grey);
+  border-radius: 3px;
+  padding: 4px 8px;
+  background-color: var(--background);
+  margin-bottom: 8px;
+  transition: 1s;
+  font-weight: 500;
+}

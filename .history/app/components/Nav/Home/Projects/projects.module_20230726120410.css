@@ -1,0 +1,27 @@
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.projectContainer {
+  background-color: var(--primary);
+  height: calc((100vw / 3) / 16 * 9);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageContainer {
+  position: relative;
+  height: calc(100% - 120px);
+  width: calc(100%);
+  border-radius: 3px;
+
+  border-radius: 3px;
+}
+
+.imageContainer img {
+  border-radius: 3px;
+}

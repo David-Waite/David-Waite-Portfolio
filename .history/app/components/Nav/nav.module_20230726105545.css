@@ -1,0 +1,14 @@
+.container {
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.container a {
+  color: var(--black);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+}

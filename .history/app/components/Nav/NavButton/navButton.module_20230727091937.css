@@ -1,0 +1,21 @@
+.container {
+  border: 2px solid var(--black);
+  color: var(--black);
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 5px 10px;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer !important;
+}
+
+.container:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+@media (max-width: 425px) {
+  .link {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,59 @@
+.menu {
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.menu div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.linkContainer {
+  position: relative;
+  transition: 1s;
+}
+.linkContainer p {
+  position: relative;
+  color: var(--white);
+}
+
+.about:hover .aboutBackground {
+  left: -136px;
+}
+
+.aboutBackground,
+.educationBackground,
+.technologiesBackground {
+  position: absolute;
+  background-color: var(--primary);
+  left: 0;
+  height: 30px;
+  border-radius: 0 3px 3px 0;
+  transition: 0.3s;
+}
+.aboutBackground {
+  width: 136px;
+}
+
+.educationBackground {
+  width: 128px;
+}
+
+.technologiesBackground {
+}
+.menu p {
+  top: 0;
+  padding: 4px 40px;
+
+  transition: 1s;
+}
+
+.selected {
+  border-radius: 0 3px 3px 0;
+  color: var(--white);
+  background: rgb(37, 91, 72);
+}

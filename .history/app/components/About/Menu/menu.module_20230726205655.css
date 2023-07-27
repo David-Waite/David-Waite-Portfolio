@@ -1,0 +1,82 @@
+.menu {
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.menu div {
+  display: flex;
+  align-items: center;
+  cursor: pointer !important;
+}
+
+.linkContainer {
+  position: relative;
+  cursor: pointer !important;
+}
+.linkContainer p {
+  position: relative;
+  color: var(--black);
+}
+
+.aboutBackground,
+.educationBackground,
+.technologiesBackground {
+  position: absolute;
+  background-color: var(--primary);
+  left: 0;
+  height: 30px;
+  border-radius: 0 3px 3px 0;
+  transition: 0.3s ease-in;
+}
+.about {
+  width: 136px;
+}
+.aboutBackground {
+  width: 136px;
+  left: -136px;
+}
+.about:hover .aboutBackground {
+  left: 0;
+}
+
+.education {
+  width: 168px;
+}
+.educationBackground {
+  width: 168px;
+  left: -168px;
+}
+.education:hover .educationBackground {
+  left: 0;
+}
+
+.technologies {
+  width: 195px;
+}
+.technologiesBackground {
+  width: 195px;
+  left: -195px;
+}
+.technologies:hover .technologiesBackground {
+  left: 0;
+}
+
+.menu p {
+  top: 0;
+  padding: 4px 40px;
+
+  transition: 0.3s;
+}
+
+.selected {
+  border-radius: 0 3px 3px 0;
+  color: var(--white);
+  background: rgb(37, 91, 72);
+}
+
+.linkContainer p:hover {
+  position: relative;
+  color: var(--white);
+}

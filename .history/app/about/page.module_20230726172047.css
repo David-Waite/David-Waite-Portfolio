@@ -1,0 +1,6 @@
+.imageContainer {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  box-shadow: var(--primary) 24px -24px 0px 0px;
+}

@@ -1,0 +1,30 @@
+.main {
+  margin: 0 30px;
+}
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 120px 0px;
+}
+
+.headingContainer h1 {
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 4px 40px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.headingContainer p {
+  color: var(--grey);
+  max-width: 550px;
+  text-align: center;
+  line-height: 27px;
+}
+
+.dropdown {
+  font-size: 18px;
+}

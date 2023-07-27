@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  height: calc(100vh - 70px);
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  margin: auto;
+  display: flex;
+  align-items: center;
+
+  gap: 200px;
+}
+.imageContainer {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  box-shadow: var(--primary) 16px -16px 0px 0px;
+}
+
+.description {
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 740px;
+  line-height: 27px;
+}

@@ -1,0 +1,54 @@
+.main {
+  margin: 0 30px;
+}
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 120px 0px;
+}
+
+.headingContainer h1 {
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 4px 40px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.headingContainer p {
+  color: var(--grey);
+  max-width: 550px;
+  text-align: center;
+  line-height: 27px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.projectContainer {
+  background-color: var(--primary);
+  height: calc((100vw / 3) / 16 * 9);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageContainer {
+  height: calc(100% - 100px);
+  width: 100%;
+  background-color: blue !important;
+
+  border-radius: 3px;
+}
+
+.imageContainer img {
+  border-radius: 3px;
+  display: none;
+}

@@ -1,0 +1,63 @@
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.projectsCard {
+  background-color: var(--primary);
+  height: calc((100vw / 3) / 16 * 9);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectContainer {
+  position: relative;
+
+  height: calc(100% - 120px);
+  width: calc(100%);
+  border-radius: 3px;
+}
+.projectImages {
+  object-fit: contain;
+  opacity: 0;
+}
+.projectInfo {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--green);
+}
+
+.projectsCard h2 {
+  margin-top: auto;
+  text-align: center;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.projectsCard p {
+  font-size: 18px;
+  text-align: center;
+  margin: 8px 30px 0 30px;
+  color: var(--white);
+  font-weight: 300;
+  margin-bottom: auto;
+}
+
+.madeWith {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  gap: 8px;
+  color: #a7a7a7;
+  font-size: 14.4px;
+}

@@ -1,0 +1,19 @@
+import styles from "./menu.module.css";
+export default function Menu() {
+  return (
+    <div className={styles.menu}>
+      <div className={styles.about}>
+        <div className={styles.aboutBackground}></div>
+        <p>About</p>
+      </div>
+      <div className={styles.about}>
+        <div className={styles.aboutBackground}></div>
+        <p>Education</p>
+      </div>
+      <div className={styles.selected}>
+        className={styles.aboutBackground}
+        <p>Technologies</p>
+      </div>
+    </div>
+  );
+}
