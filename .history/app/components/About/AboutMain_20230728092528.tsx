@@ -33,12 +33,12 @@ export default function AboutMain() {
         quickly. This and my enjoyment of clean designs fuels my passion for web
         development
         <br />
-        <br /> I started playing around with web development a few years ago but
-        didn&apos;t get into it until 2022 when taking a course on Front-End Web
-        Development at Swinburne Universit
+        <br /> I first started playing around with web development in primary
+        school, but didn&apos;t get into it until 2022 when taking a course on
+        Front-End Web Development at Swinburne University.
         <br />
         <br /> I am currently in my second year studying computer science while
-        working on a personal project and freelancing on the side.
+        working on personal project and freelancing on the side
       </p>
     </>
   );
