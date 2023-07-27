@@ -22,7 +22,7 @@ export default function Dropdown(props: { onClick: any; dropdown: any }) {
   };
 
   const closedStyle = {
-    top: "6px",
+    top: "4px",
   };
 
   const openSVGStyle = {

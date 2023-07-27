@@ -3,12 +3,16 @@
   position: relative;
   width: 116px;
 
+  background-color: aqua;
+
   height: 8px;
+
+  margin-bottom: 8px;
 }
 .select {
   width: 116px;
   z-index: 2;
-  top: -32px;
+  top: -34px;
   position: absolute;
   display: flex;
   justify-content: space-between;

@@ -3,6 +3,8 @@
   position: relative;
   width: 116px;
 
+  background-color: aqua;
+
   height: 8px;
 }
 .select {

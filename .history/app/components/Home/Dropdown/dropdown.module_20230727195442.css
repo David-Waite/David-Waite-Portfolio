@@ -3,12 +3,13 @@
   position: relative;
   width: 116px;
 
-  height: 8px;
+  height: 4px;
+  margin-bottom: 4px;
 }
 .select {
   width: 116px;
   z-index: 2;
-  top: -32px;
+  top: -34px;
   position: absolute;
   display: flex;
   justify-content: space-between;
