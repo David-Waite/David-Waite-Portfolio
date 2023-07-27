@@ -135,7 +135,7 @@
     padding: 20px;
     margin-top: 40px;
     display: block;
-    height: auto;
+    height: auto\;
   }
 
   .description {
