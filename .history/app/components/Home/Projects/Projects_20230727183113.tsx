@@ -25,7 +25,7 @@ export default function About() {
       image: "/zappoWebsite.webp",
       imageAlt: "zappo website landing page",
       link: "zappo-fan-page.vercel.app/",
-      description: "A page showcasing my favourite lolly ",
+      description: "A birthday reminder",
       madeWith: ["React.Js"],
     },
     {

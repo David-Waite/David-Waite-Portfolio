@@ -22,13 +22,6 @@ export default function About() {
       madeWith: ["React.Js"],
     },
     {
-      image: "/zappoWebsite.webp",
-      imageAlt: "zappo website landing page",
-      link: "zappo-fan-page.vercel.app/",
-      description: "A page showcasing my favourite lolly ",
-      madeWith: ["React.Js"],
-    },
-    {
       image: "/boredAPI.webp",
       imageAlt: "boredAPI",
       link: "main--endearing-lebkuchen-f290d5.netlify.app",
