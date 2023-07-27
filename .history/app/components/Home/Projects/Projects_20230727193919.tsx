@@ -10,9 +10,9 @@ export default function About() {
     {
       image: "/simplySpell.webp",
       imageAlt: "Simply Spell",
-      link: "main--radiant-pasca-39ceb4.netlify.app",
-      description: "An app to help with spelling",
-      madeWith: ["React Native", "expo"],
+      link: "https://main--radiant-pasca-39ceb4.netlify.app/",
+      description: "My portfolio from 2022",
+      madeWith: ["Next.Js", "Contentful"],
     },
     {
       image: "/2022Porfolio.webp",

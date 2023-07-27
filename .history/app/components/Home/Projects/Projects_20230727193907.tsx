@@ -9,10 +9,10 @@ export default function About() {
   const projects: any = [
     {
       image: "/simplySpell.webp",
-      imageAlt: "Simply Spell",
-      link: "main--radiant-pasca-39ceb4.netlify.app",
-      description: "An app to help with spelling",
-      madeWith: ["React Native", "expo"],
+      imageAlt: "simply spell",
+      link: "myportfolio-three-psi.vercel.app",
+      description: "My portfolio from 2022",
+      madeWith: ["Next.Js", "Contentful"],
     },
     {
       image: "/2022Porfolio.webp",
