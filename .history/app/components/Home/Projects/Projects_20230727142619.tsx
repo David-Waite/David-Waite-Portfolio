@@ -68,7 +68,7 @@ export default function About() {
                 <div>
                   <h2>{item.link}</h2>
                   <p>{item.description}</p>
-                  <p className={styles.linkContainer}>
+                  <p>
                     <a
                       href={`https://${item.link}`}
                       target="_blank"

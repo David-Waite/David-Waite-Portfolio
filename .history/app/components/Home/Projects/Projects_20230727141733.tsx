@@ -59,46 +59,35 @@ export default function About() {
 
   const projectCardsElement: any = data.map((item: any) => {
     return (
-      <div key={item.title} className={styles.contaner}>
-        <div className={styles.outerContainer}>
-          <div className={styles.projectsCard}>
-            <div className={styles.projectContainer}>
-              <div className={styles.projectInfo}>
-                <div></div>
-                <div>
-                  <h2>{item.link}</h2>
-                  <p>{item.description}</p>
-                  <p className={styles.linkContainer}>
-                    <a
-                      href={`https://${item.link}`}
-                      target="_blank"
-                      className={styles.link}
-                    >
-                      View Website
-                    </a>
-                  </p>
-                </div>
-
-                <ul className={styles.madeWith}>
-                  {item.madeWith.map((madewith: any) => (
-                    <li key={item.title}>
-                      {`${madewith}${
-                        madewith === item.madeWith[item.madeWith.length - 1]
-                          ? ""
-                          : ","
-                      }`}
-                    </li>
-                  ))}
-                </ul>
+      <div className={styles.outerContainer}>
+        <div className={styles.projectsCard}>
+          <div className={styles.projectContainer}>
+            <div className={styles.projectInfo}>
+              <div></div>
+              <div>
+                <h2>{item.link}</h2>
+                <p>{item.description}</p>
               </div>
 
-              <Image
-                className={styles.projectImages}
-                src={item.image}
-                alt={item.imageAlt}
-                fill={true}
-              />
+              <ul className={styles.madeWith}>
+                {item.madeWith.map((madewith: any) => (
+                  <li key={item.title}>
+                    {`${madewith}${
+                      madewith === item.madeWith[item.madeWith.length - 1]
+                        ? ""
+                        : ","
+                    }`}
+                  </li>
+                ))}
+              </ul>
             </div>
+
+            <Image
+              className={styles.projectImages}
+              src={item.image}
+              alt={item.imageAlt}
+              fill={true}
+            />
           </div>
         </div>
       </div>

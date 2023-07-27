@@ -73,13 +73,11 @@
   opacity: 1;
 }
 
-.linkContainer {
-  padding-top: 16px;
-}
 .link {
   text-align: center;
   border: 2px solid var(--white);
   padding: 4px 8px;
+  font-size: 18px;
   text-decoration: none;
   color: var(--white);
   border-radius: 3px;
@@ -128,12 +126,6 @@
   .projectsCard p,
   .projectsCard h2 {
     font-size: 16px;
-  }
-  .link {
-    font-size: 12px;
-  }
-  .linkContainer {
-    padding-top: 8px;
   }
 
   .madeWith {

@@ -35,12 +35,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   opacity: 0;
   transition: 0.4s;
 }
 
 .projectsCard h2 {
+  margin-top: auto;
   text-align: center;
   color: var(--white);
   font-size: 18px;
@@ -53,6 +53,7 @@
   margin: 8px 30px 0 30px;
   color: var(--white);
   font-weight: 300;
+  margin-bottom: auto;
 }
 
 .madeWith {
@@ -73,17 +74,12 @@
   opacity: 1;
 }
 
-.linkContainer {
-  padding-top: 16px;
-}
 .link {
-  text-align: center;
   border: 2px solid var(--white);
   padding: 4px 8px;
   text-decoration: none;
   color: var(--white);
   border-radius: 3px;
-  font-weight: 500;
 }
 
 .link:hover {
@@ -128,12 +124,6 @@
   .projectsCard p,
   .projectsCard h2 {
     font-size: 16px;
-  }
-  .link {
-    font-size: 12px;
-  }
-  .linkContainer {
-    padding-top: 8px;
   }
 
   .madeWith {

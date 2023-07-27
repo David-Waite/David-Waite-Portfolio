@@ -11,6 +11,7 @@ export default function Home() {
           they wanna go without the clutter.
         </p>
       </div>
+      <label htmlFor="enquiring"></label>
 
       <Projects />
     </main>

@@ -13,10 +13,6 @@ export default function Dropdown(props: { onClick: any; dropdown: any }) {
     setHover(false);
   }
 
-  function toggleSelect() {
-    setHover((prev) => !prev);
-  }
-
   const openStyle = {
     top: "-34px",
   };
@@ -43,7 +39,6 @@ export default function Dropdown(props: { onClick: any; dropdown: any }) {
         className={styles.select}
         onMouseOver={() => setHoverSVG(true)}
         onMouseOut={() => setHoverSVG(false)}
-        onClick={toggleSelect}
       >
         {props.dropdown.selected}
         <BiSolidDownArrow

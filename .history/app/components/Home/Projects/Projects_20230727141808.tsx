@@ -59,7 +59,13 @@ export default function About() {
 
   const projectCardsElement: any = data.map((item: any) => {
     return (
-      <div key={item.title} className={styles.contaner}>
+      <div
+        key={item.title}
+        href={`https://${item.link}`}
+        target="_blank"
+        style={{ textDecoration: "none" }}
+        className={styles.contaner}
+      >
         <div className={styles.outerContainer}>
           <div className={styles.projectsCard}>
             <div className={styles.projectContainer}>
@@ -68,15 +74,6 @@ export default function About() {
                 <div>
                   <h2>{item.link}</h2>
                   <p>{item.description}</p>
-                  <p className={styles.linkContainer}>
-                    <a
-                      href={`https://${item.link}`}
-                      target="_blank"
-                      className={styles.link}
-                    >
-                      View Website
-                    </a>
-                  </p>
                 </div>
 
                 <ul className={styles.madeWith}>

@@ -68,15 +68,6 @@ export default function About() {
                 <div>
                   <h2>{item.link}</h2>
                   <p>{item.description}</p>
-                  <p className={styles.linkContainer}>
-                    <a
-                      href={`https://${item.link}`}
-                      target="_blank"
-                      className={styles.link}
-                    >
-                      View Website
-                    </a>
-                  </p>
                 </div>
 
                 <ul className={styles.madeWith}>

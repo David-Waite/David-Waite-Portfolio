@@ -74,7 +74,7 @@
 }
 
 .linkContainer {
-  padding-top: 16px;
+  margin-top: 16px;
 }
 .link {
   text-align: center;
@@ -128,12 +128,6 @@
   .projectsCard p,
   .projectsCard h2 {
     font-size: 16px;
-  }
-  .link {
-    font-size: 12px;
-  }
-  .linkContainer {
-    padding-top: 8px;
   }
 
   .madeWith {

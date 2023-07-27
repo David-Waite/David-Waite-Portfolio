@@ -28,7 +28,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: calc((100vw - 120px) / 3 )
   height: 100%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -38,6 +38,7 @@
   align-items: center;
   opacity: 0;
   transition: 0.4s;
+  background-color: blue;
 }
 
 .projectsCard h2 {
@@ -53,6 +54,7 @@
   margin: 8px 30px 0 30px;
   color: var(--white);
   font-weight: 300;
+  margin-bottom: auto;
 }
 
 .madeWith {
@@ -73,9 +75,6 @@
   opacity: 1;
 }
 
-.linkContainer {
-  padding-top: 16px;
-}
 .link {
   text-align: center;
   border: 2px solid var(--white);
@@ -128,12 +127,6 @@
   .projectsCard p,
   .projectsCard h2 {
     font-size: 16px;
-  }
-  .link {
-    font-size: 12px;
-  }
-  .linkContainer {
-    padding-top: 8px;
   }
 
   .madeWith {

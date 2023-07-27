@@ -126,14 +126,15 @@
 
 @media (max-width: 425px) {
   .projectsCard p,
-  .projectsCard h2 {
+  .projectsCard h2,
+  .link {
     font-size: 16px;
   }
   .link {
-    font-size: 12px;
+    font-size: 12pxs;
   }
   .linkContainer {
-    padding-top: 8px;
+    padding-top: 4px;
   }
 
   .madeWith {
