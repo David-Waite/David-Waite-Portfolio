@@ -1,6 +1,6 @@
 "use client";
+import { CSSProperties, useState } from "react";
 import styles from "./menu.module.css";
-
 export default function Menu(props: {
   onClick: any;
   selected: any;
@@ -24,8 +24,7 @@ export default function Menu(props: {
       }`}
       id="menu"
     >
-      <a
-        href="/about#aboutHeading"
+      <div
         className={`${styles.linkContainer} ${styles.about}`}
         onClick={() => handleClick("about")}
       >
@@ -33,11 +32,12 @@ export default function Menu(props: {
           className={styles.aboutBackground}
           style={Object.assign(props.selected.about && selectedBackground)}
         ></div>
-        <p style={Object.assign(props.selected.about && selectedP)}>About</p>
-      </a>
+        <p style={Object.assign(props.selected.about && selectedP)}>
+          <a href="/about#aboutHeading">About</a>
+        </p>
+      </div>
       <br />
-      <a
-        href="/about#aboutHeading"
+      <div
         className={`${styles.linkContainer} ${styles.education}`}
         onClick={() => handleClick("education")}
       >
@@ -46,12 +46,16 @@ export default function Menu(props: {
           style={Object.assign(props.selected.education && selectedBackground)}
         ></div>
         <p style={Object.assign(props.selected.education && selectedP)}>
-          Education
+          <a
+            className={Object.assign(props.selected.about && selectedP)}
+            href="/about#aboutHeading"
+          >
+            Education
+          </a>
         </p>
-      </a>
+      </div>
       <br />
-      <a
-        href="/about#aboutHeading"
+      <div
         className={`${styles.linkContainer} ${styles.technologies}`}
         onClick={() => handleClick("technologies")}
       >
@@ -62,9 +66,9 @@ export default function Menu(props: {
           )}
         ></div>
         <p style={Object.assign(props.selected.technologies && selectedP)}>
-          Technologies
+          <a href="/about#aboutHeading">Technologies</a>
         </p>
-      </a>
+      </div>
     </div>
   );
 }

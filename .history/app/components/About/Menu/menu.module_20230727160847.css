@@ -75,11 +75,12 @@
   background: rgb(37, 91, 72);
 }
 
-.menu a {
+.linkContainer a {
   text-decoration: none;
+  color: unset;
 }
 
-.linkContainer p:hover {
+.linkContainer a:hover {
   position: relative;
   color: var(--white);
 }

@@ -75,6 +75,10 @@
   background: rgb(37, 91, 72);
 }
 
+.linkContainer a {
+  color: unset;
+}
+
 .menu a {
   text-decoration: none;
 }

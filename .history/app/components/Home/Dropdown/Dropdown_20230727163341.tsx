@@ -36,19 +36,20 @@ export default function Dropdown(props: { onClick: any; dropdown: any }) {
   return (
     <div
       className={styles.selectContainer}
+      onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
       <div
         className={styles.select}
-        onMouseOver={() => setSelectTopHover(true)}
-        onMouseOut={() => setSelectTopHover(false)}
+        onMouseOver={() => setHoverSVG(true)}
+        onMouseOut={() => setHoverSVG(false)}
         onClick={toggleSelect}
       >
         {props.dropdown.selected}
         <BiSolidDownArrow
           style={Object.assign(
             hover && openSVGStyle,
-            selectTopHover && hoverSVGStyle
+            hoverSVG && hoverSVGStyle
           )}
         />
       </div>

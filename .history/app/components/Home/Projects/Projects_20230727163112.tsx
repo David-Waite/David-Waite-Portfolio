@@ -34,7 +34,7 @@ export default function About() {
       madeWith: ["Next.Js", "Contentful"],
     },
     {
-      image: "/CassieFleming.webp",
+      image: "/CassieFleming.jpg",
       imageAlt: "Cassie Fleming illustrations",
       link: "www.cassiefleming.com",
       description: "An animation portfolio",

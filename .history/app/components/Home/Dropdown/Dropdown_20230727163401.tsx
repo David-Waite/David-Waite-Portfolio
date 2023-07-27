@@ -36,6 +36,7 @@ export default function Dropdown(props: { onClick: any; dropdown: any }) {
   return (
     <div
       className={styles.selectContainer}
+      onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
       <div
@@ -48,7 +49,7 @@ export default function Dropdown(props: { onClick: any; dropdown: any }) {
         <BiSolidDownArrow
           style={Object.assign(
             hover && openSVGStyle,
-            selectTopHover && hoverSVGStyle
+            hoverSVG && hoverSVGStyle
           )}
         />
       </div>

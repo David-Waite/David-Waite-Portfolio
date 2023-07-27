@@ -25,7 +25,6 @@ export default function Menu(props: {
       id="menu"
     >
       <a
-        href="/about#aboutHeading"
         className={`${styles.linkContainer} ${styles.about}`}
         onClick={() => handleClick("about")}
       >
@@ -50,8 +49,7 @@ export default function Menu(props: {
         </p>
       </a>
       <br />
-      <a
-        href="/about#aboutHeading"
+      <div
         className={`${styles.linkContainer} ${styles.technologies}`}
         onClick={() => handleClick("technologies")}
       >
@@ -62,9 +60,9 @@ export default function Menu(props: {
           )}
         ></div>
         <p style={Object.assign(props.selected.technologies && selectedP)}>
-          Technologies
+          <a href="/about#aboutHeading">Technologies</a>
         </p>
-      </a>
+      </div>
     </div>
   );
 }

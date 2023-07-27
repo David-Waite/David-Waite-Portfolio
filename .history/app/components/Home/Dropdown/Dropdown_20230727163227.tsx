@@ -5,7 +5,7 @@ import styles from "./dropdown.module.css";
 import { BiSolidDownArrow } from "react-icons/bi";
 
 export default function Dropdown(props: { onClick: any; dropdown: any }) {
-  const [selectTopHover, setSelectTopHover] = useState(false);
+  const [hoverSVG, setHoverSVG] = useState(false);
   const [hover, setHover] = useState(false);
 
   function handleSelect() {
@@ -40,15 +40,14 @@ export default function Dropdown(props: { onClick: any; dropdown: any }) {
     >
       <div
         className={styles.select}
-        onMouseOver={() => setSelectTopHover(true)}
-        onMouseOut={() => setSelectTopHover(false)}
+        onMouseOut={() => setHoverSVG(false)}
         onClick={toggleSelect}
       >
         {props.dropdown.selected}
         <BiSolidDownArrow
           style={Object.assign(
             hover && openSVGStyle,
-            selectTopHover && hoverSVGStyle
+            hoverSVG && hoverSVGStyle
           )}
         />
       </div>

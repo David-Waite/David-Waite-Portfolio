@@ -65,7 +65,7 @@
   display: none;
 }
 .links a:hover {
-  color: var(--background);
+  color: wheat;
 }
 
 .moblieLink {

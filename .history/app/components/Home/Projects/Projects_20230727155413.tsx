@@ -8,7 +8,7 @@ import { useState } from "react";
 export default function About() {
   const projects: any = [
     {
-      image: "/EdAble.webp",
+      image: "/EdAble.jpg",
       imageAlt: "Edable Home",
       link: "www.edable.org.au",
       description:
@@ -19,14 +19,14 @@ export default function About() {
 
   const work: any = [
     {
-      image: "/FifthLayerMusic.webp",
+      image: "/FifthLayerMusic.jpg",
       imageAlt: "Fifth layer music home",
       link: "fifth-layer-music.vercel.app",
       description: "A platform for musicians to do what they do best",
       madeWith: ["Next.Js"],
     },
     {
-      image: "/EdAble.webp",
+      image: "/EdAble.jpg",
       imageAlt: "Edable Home",
       link: "www.edable.org.au",
       description:
@@ -34,7 +34,7 @@ export default function About() {
       madeWith: ["Next.Js", "Contentful"],
     },
     {
-      image: "/CassieFleming.webp",
+      image: "/CassieFleming.jpg",
       imageAlt: "Cassie Fleming illustrations",
       link: "www.cassiefleming.com",
       description: "An animation portfolio",

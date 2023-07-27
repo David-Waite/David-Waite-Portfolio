@@ -1,14 +1,35 @@
 "use client";
+import { CSSProperties, useState } from "react";
 import styles from "./menu.module.css";
-
+import { usePathname } from "next/navigation";
 export default function Menu(props: {
   onClick: any;
   selected: any;
   mobile: boolean;
 }) {
+  const pathname = usePathname();
   function handleClick(select: string) {
     props.onClick(select);
   }
+
+  const handleScroll = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    select: string
+  ) => {
+    if (pathname === "/about") {
+      e.preventDefault();
+    }
+
+    handleClick(select);
+    // get the href and remove everything before the hash (#)
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    // get the element by id and use scrollIntoView
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   const selectedBackground: any = {
     left: "0px",
@@ -25,19 +46,20 @@ export default function Menu(props: {
       id="menu"
     >
       <a
-        href="/about#aboutHeading"
         className={`${styles.linkContainer} ${styles.about}`}
-        onClick={() => handleClick("about")}
+        onClick={handleScroll.bind("about")}
+        href="/about#aboutHeading"
       >
         <div
           className={styles.aboutBackground}
           style={Object.assign(props.selected.about && selectedBackground)}
         ></div>
-        <p style={Object.assign(props.selected.about && selectedP)}>About</p>
+        <p style={Object.assign(props.selected.about && selectedP)}>
+          <a href="/about#aboutHeading">About</a>
+        </p>
       </a>
       <br />
-      <a
-        href="/about#aboutHeading"
+      <div
         className={`${styles.linkContainer} ${styles.education}`}
         onClick={() => handleClick("education")}
       >
@@ -46,12 +68,16 @@ export default function Menu(props: {
           style={Object.assign(props.selected.education && selectedBackground)}
         ></div>
         <p style={Object.assign(props.selected.education && selectedP)}>
-          Education
+          <a
+            className={Object.assign(props.selected.about && selectedP)}
+            href="/about#aboutHeading"
+          >
+            Education
+          </a>
         </p>
-      </a>
+      </div>
       <br />
-      <a
-        href="/about#aboutHeading"
+      <div
         className={`${styles.linkContainer} ${styles.technologies}`}
         onClick={() => handleClick("technologies")}
       >
@@ -62,9 +88,9 @@ export default function Menu(props: {
           )}
         ></div>
         <p style={Object.assign(props.selected.technologies && selectedP)}>
-          Technologies
+          <a href="/about#aboutHeading">Technologies</a>
         </p>
-      </a>
+      </div>
     </div>
   );
 }

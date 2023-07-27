@@ -68,7 +68,7 @@ export default function AboutMain() {
   );
   const TechnologiesText = (
     <>
-      <h1 id="aboutHeading">What I&apos;m confortable with</h1>
+      <h1>What I&apos;m confortable with</h1>
       <ul className={`${styles.description} ${styles.descriptionList} `}>
         <li>HTML</li>
         <li>CSS</li>

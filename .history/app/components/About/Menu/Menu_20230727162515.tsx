@@ -25,7 +25,6 @@ export default function Menu(props: {
       id="menu"
     >
       <a
-        href="/about#aboutHeading"
         className={`${styles.linkContainer} ${styles.about}`}
         onClick={() => handleClick("about")}
       >
