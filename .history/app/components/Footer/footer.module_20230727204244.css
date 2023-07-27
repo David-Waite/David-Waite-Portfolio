@@ -1,0 +1,10 @@
+.main {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 8px;
+  font-size: 14.4px;
+  color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
