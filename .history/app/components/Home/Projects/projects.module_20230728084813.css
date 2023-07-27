@@ -126,10 +126,7 @@
 
 @media (max-width: 425px) {
   .projectsCard {
-    border-radius: 0px;
-  }
-  .projectsGrid {
-    gap: 10px;
+    border-radius: 3px;
   }
 
   .projectsCard p,

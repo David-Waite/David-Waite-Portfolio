@@ -1,12 +1,12 @@
+.main {
+  margin: 0 30px;
+}
 .headingContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 120px 0px;
-}
-
-.projectContainer {
-  margin: 0 30px;
+  background-color: blue;
 }
 
 .headingContainer h1 {
@@ -27,19 +27,12 @@
 }
 
 @media (max-width: 768px) {
-  .headingContainer {
-    margin: 120px 20px;
+  .main {
+    margin: 0 20px;
   }
 }
 
 @media (max-width: 425px) {
-  .headingContainer {
-    margin: 120px 20px;
-  }
-  .projectContainer {
-    margin: 0;
-  }
-
   .headingContainer h1,
   .headingContainer h1 p {
     font-size: 16px;

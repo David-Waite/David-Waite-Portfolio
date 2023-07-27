@@ -1,3 +1,6 @@
+.main {
+  margin: 0 30px;
+}
 .headingContainer {
   display: flex;
   flex-direction: column;

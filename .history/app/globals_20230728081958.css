@@ -22,9 +22,6 @@ body {
   flex-direction: column;
 }
 
-.content {
-  min-height: calc(100vh - 186px);
-}
 * {
   padding: 0;
   margin: 0;

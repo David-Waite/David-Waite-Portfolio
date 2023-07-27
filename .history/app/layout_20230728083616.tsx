@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   title: "David Waite | Web Developer",
   description: `David Waite. Web Developer. I like to create simple clean websites that gets the user to where they wanna go without the clutter.`,
   formatDetection: {
+    email: false,
+    address: false,
     telephone: false,
   },
 };

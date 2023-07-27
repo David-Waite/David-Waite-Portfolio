@@ -128,9 +128,6 @@
   .projectsCard {
     border-radius: 0px;
   }
-  .projectsGrid {
-    gap: 10px;
-  }
 
   .projectsCard p,
   .projectsCard h2 {

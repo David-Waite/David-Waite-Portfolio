@@ -59,8 +59,7 @@
 }
 
 @media (max-width: 425px) {
-  .select,
-  .dropdown {
+  .select {
     left: 20px;
   }
   .select,

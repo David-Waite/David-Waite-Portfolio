@@ -126,10 +126,7 @@
 
 @media (max-width: 425px) {
   .projectsCard {
-    border-radius: 0px;
-  }
-  .projectsGrid {
-    gap: 10px;
+    border-radius: 3px;
   }
 
   .projectsCard p,
@@ -147,7 +144,7 @@
     font-size: 12.8px;
   }
   .projectContainer {
-    height: calc(100% - 0px);
+    height: calc(100% - 23px);
     width: calc(100% - 40px);
   }
 }

@@ -5,6 +5,6 @@ export default function Footer() {
     <footer className={styles.main}>
       <p>ABN: 83 626 560 303</p>
       <p>copyright © David Waite, 2023. All rights reserved.</p>
-    </footer>
+    </foot>
   );
 }
