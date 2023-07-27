@@ -8,18 +8,12 @@ import { useState } from "react";
 export default function About() {
   const projects: any = [
     {
-      image: "/2022Porfolio.webp",
-      imageAlt: "2022 portfolio",
-      link: "myportfolio-three-psi.vercel.app",
-      description: "My portfolio from 2022",
+      image: "/EdAble.webp",
+      imageAlt: "Edable Home",
+      link: "www.edable.org.au",
+      description:
+        "A charity working on employing and educating in the field of autism",
       madeWith: ["Next.Js", "Contentful"],
-    },
-    {
-      image: "/hannahsBirthday.webp",
-      imageAlt: "hannahs birthday",
-      link: "hannahs-birthday.vercel.app",
-      description: "A birthday reminder",
-      madeWith: ["React.Js"],
     },
   ];
 

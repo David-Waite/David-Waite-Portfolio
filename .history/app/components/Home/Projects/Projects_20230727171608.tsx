@@ -18,8 +18,8 @@ export default function About() {
       image: "/hannahsBirthday.webp",
       imageAlt: "hannahs birthday",
       link: "hannahs-birthday.vercel.app",
-      description: "A birthday reminder",
-      madeWith: ["React.Js"],
+      description: "My portfolio from 2022",
+      madeWith: ["Next.Js", "Contentful"],
     },
   ];
 

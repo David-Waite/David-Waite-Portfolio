@@ -19,7 +19,7 @@ export default function About() {
       imageAlt: "hannahs birthday",
       link: "hannahs-birthday.vercel.app",
       description: "A birthday reminder",
-      madeWith: ["React.Js"],
+      madeWith: ["Next.Js", "Contentful"],
     },
   ];
 

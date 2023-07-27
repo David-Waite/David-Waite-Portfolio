@@ -14,13 +14,6 @@ export default function About() {
       description: "My portfolio from 2022",
       madeWith: ["Next.Js", "Contentful"],
     },
-    {
-      image: "/hannahsBirthday.webp",
-      imageAlt: "hannahs birthday",
-      link: "hannahs-birthday.vercel.app",
-      description: "A birthday reminder",
-      madeWith: ["React.Js"],
-    },
   ];
 
   const work: any = [
