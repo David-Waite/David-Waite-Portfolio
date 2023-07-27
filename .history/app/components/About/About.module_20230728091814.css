@@ -132,7 +132,6 @@
     display: flex;
   }
   .container {
-    padding: 20px;
     margin-top: 40px;
     display: block;
     height: auto;
@@ -168,16 +167,18 @@
     margin-right: 0px;
     align-self: center;
   }
-
+  .links {
+    position: static;
+    width: 200px;
+    margin-left: auto;
+  }
   .moblieLinkContainer {
     margin-top: 40px;
     display: flex;
-    width: 100%;
   }
   .links {
-    position: static;
     margin: 0;
-    margin-right: -20px;
+    margin-right: 10px;
     width: 100px;
   }
 }

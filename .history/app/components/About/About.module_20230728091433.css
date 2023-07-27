@@ -168,14 +168,16 @@
     margin-right: 0px;
     align-self: center;
   }
-
+  .links {
+    position: static;
+    width: 200px;
+    margin-left: auto;
+  }
   .moblieLinkContainer {
     margin-top: 40px;
     display: flex;
-    width: 100%;
   }
   .links {
-    position: static;
     margin: 0;
     margin-right: -20px;
     width: 100px;

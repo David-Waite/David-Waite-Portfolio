@@ -172,12 +172,11 @@
   .moblieLinkContainer {
     margin-top: 40px;
     display: flex;
-    width: 100%;
   }
   .links {
     position: static;
     margin: 0;
-    margin-right: -20px;
+    margin-right: 10px;
     width: 100px;
   }
 }
