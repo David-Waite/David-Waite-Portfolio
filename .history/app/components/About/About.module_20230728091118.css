@@ -193,8 +193,12 @@
 @media (max-width: 768px) {
   .imageContainer {
     align-self: center;
-    width: 200px;
-    height: 200px;
+  }
+
+  .links {
+    margin: 0;
+    margin-right: -20px;
+    width: 100px;
   }
 }
 

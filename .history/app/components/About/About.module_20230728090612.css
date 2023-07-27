@@ -131,6 +131,10 @@
   .moblieLink {
     display: flex;
   }
+
+  .description {
+    height: auto;
+  }
   .container {
     padding: 20px;
     margin-top: 40px;
@@ -139,24 +143,10 @@
   }
 
   .description {
-    height: auto;
+    margin-right: 16px;
     width: 100%;
-    text-align: left;
-  }
-
-  .textContainer {
-    align-self: flex-start;
-  }
-
-  .moblieLinkContainer {
-    align-items: center;
-    justify-content: space-between;
-    width: 100vw;
-    height: 134px;
-    margin-bottom: 40px;
   }
   .descriptionList {
-    width: 100%;
     margin-left: 16px;
     margin-right: 0px;
   }
@@ -177,11 +167,6 @@
     margin-top: 40px;
     display: flex;
   }
-  .links {
-    margin: 0;
-    margin-right: -20px;
-    width: 100px;
-  }
 }
 
 @media (max-width: 850px) {
@@ -191,10 +176,30 @@
 }
 
 @media (max-width: 768px) {
+  .content {
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
   .imageContainer {
     align-self: center;
-    width: 200px;
-    height: 200px;
+  }
+  .description {
+    height: auto;
+  }
+  .textContainer {
+    align-self: flex-start;
+  }
+  .moblieLinkContainer {
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+  .links {
+    margin: 0;
+    margin-right: -20px;
+    width: 100px;
   }
 }
 
