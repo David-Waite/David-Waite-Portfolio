@@ -10,6 +10,7 @@ export default function About() {
     {
       image: "/2022Porfolio.webp",
       imageAlt: "2022 portfolio",
+
       link: "myportfolio-three-psi.vercel.app",
       description: "My portfolio from 2022",
       madeWith: ["Next.Js", "Contentful"],
@@ -26,13 +27,6 @@ export default function About() {
       imageAlt: "boredAPI",
       link: "main--endearing-lebkuchen-f290d5.netlify.app/",
       description: "Playing around with bored API",
-      madeWith: ["JavaScript"],
-    },
-    {
-      image: "/colourFlipper.webp",
-      imageAlt: "colour Flipper main page",
-      link: "main--superb-zuccutto-1e7bc5.netlify.app/",
-      description: "A random colour generator",
       madeWith: ["JavaScript"],
     },
   ];

@@ -25,14 +25,7 @@ export default function About() {
       image: "/boredAPI.webp",
       imageAlt: "boredAPI",
       link: "main--endearing-lebkuchen-f290d5.netlify.app/",
-      description: "Playing around with bored API",
-      madeWith: ["JavaScript"],
-    },
-    {
-      image: "/colourFlipper.webp",
-      imageAlt: "colour Flipper main page",
-      link: "main--superb-zuccutto-1e7bc5.netlify.app/",
-      description: "A random colour generator",
+      description: "A birthday reminder",
       madeWith: ["JavaScript"],
     },
   ];

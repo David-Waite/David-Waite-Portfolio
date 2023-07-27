@@ -15,25 +15,18 @@ export default function About() {
       madeWith: ["Next.Js", "Contentful"],
     },
     {
-      image: "/hannahsBirthday.webp",
+      image: "/boredAPI.webp",
       imageAlt: "hannahs birthday",
       link: "hannahs-birthday.vercel.app",
       description: "A birthday reminder",
       madeWith: ["React.Js"],
     },
     {
-      image: "/boredAPI.webp",
-      imageAlt: "boredAPI",
-      link: "main--endearing-lebkuchen-f290d5.netlify.app/",
-      description: "Playing around with bored API",
-      madeWith: ["JavaScript"],
-    },
-    {
-      image: "/colourFlipper.webp",
-      imageAlt: "colour Flipper main page",
-      link: "main--superb-zuccutto-1e7bc5.netlify.app/",
-      description: "A random colour generator",
-      madeWith: ["JavaScript"],
+      image: "/hannahsBirthday.webp",
+      imageAlt: "hannahs birthday",
+      link: "hannahs-birthday.vercel.app",
+      description: "A birthday reminder",
+      madeWith: ["React.Js"],
     },
   ];
 
