@@ -109,7 +109,7 @@ export default function About() {
               <div className={styles.projectInfo}>
                 <div></div>
                 <div>
-                  <h2>{item.title}</h2>
+                  <h2>{item.link}</h2>
                   <p>{item.description}</p>
                   <p className={styles.linkContainer}>
                     <a

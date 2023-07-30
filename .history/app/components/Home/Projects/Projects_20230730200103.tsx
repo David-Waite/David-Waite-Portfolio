@@ -59,7 +59,7 @@ export default function About() {
 
   const work: any = [
     {
-      title: "fifth-layer-music.vercel.app",
+      title: "Fifth layer music",
       image: "/FifthLayerMusic.webp",
       imageAlt: "Fifth layer music home",
       link: "fifth-layer-music.vercel.app",
@@ -67,7 +67,7 @@ export default function About() {
       madeWith: ["Next.Js"],
     },
     {
-      title: "www.edable.org.au",
+      title: "Edable",
       image: "/EdAble.webp",
       imageAlt: "Edable Home",
       link: "www.edable.org.au",
@@ -109,7 +109,7 @@ export default function About() {
               <div className={styles.projectInfo}>
                 <div></div>
                 <div>
-                  <h2>{item.title}</h2>
+                  <h2>{item.link}</h2>
                   <p>{item.description}</p>
                   <p className={styles.linkContainer}>
                     <a

@@ -40,7 +40,6 @@ export default function About() {
       madeWith: ["React.Js"],
     },
     {
-      title: "Suggestion Button",
       image: "/boredAPI.webp",
       imageAlt: "boredAPI",
       link: "main--endearing-lebkuchen-f290d5.netlify.app",
@@ -48,7 +47,6 @@ export default function About() {
       madeWith: ["JavaScript"],
     },
     {
-      title: "Colour Flipper",
       image: "/colourFlipper.webp",
       imageAlt: "colour Flipper main page",
       link: "main--superb-zuccutto-1e7bc5.netlify.app",
@@ -59,7 +57,6 @@ export default function About() {
 
   const work: any = [
     {
-      title: "fifth-layer-music.vercel.app",
       image: "/FifthLayerMusic.webp",
       imageAlt: "Fifth layer music home",
       link: "fifth-layer-music.vercel.app",
@@ -67,7 +64,6 @@ export default function About() {
       madeWith: ["Next.Js"],
     },
     {
-      title: "www.edable.org.au",
       image: "/EdAble.webp",
       imageAlt: "Edable Home",
       link: "www.edable.org.au",
@@ -76,7 +72,6 @@ export default function About() {
       madeWith: ["Next.Js", "Contentful"],
     },
     {
-      title: "www.cassiefleming.com",
       image: "/CassieFleming.webp",
       imageAlt: "Cassie Fleming illustrations",
       link: "www.cassiefleming.com",
@@ -109,7 +104,7 @@ export default function About() {
               <div className={styles.projectInfo}>
                 <div></div>
                 <div>
-                  <h2>{item.title}</h2>
+                  <h2>{item.link}</h2>
                   <p>{item.description}</p>
                   <p className={styles.linkContainer}>
                     <a
