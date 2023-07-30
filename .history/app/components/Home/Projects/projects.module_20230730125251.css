@@ -140,8 +140,8 @@
     font-size: 12.8px;
   }
   .projectContainer {
-    height: calc(100% - 25px);
-    width: calc(100%);
+    height: calc(100% - 50px);
+    width: calc(100% - 0px);
   }
 
   .projectsCard {

@@ -1,12 +1,12 @@
-.headingContainer {
+.main {
+  margin: 0 30px;
+}
+.headingContainer,
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 120px 30px;
-}
-
-.projectContainer {
-  margin: 0 30px;
+  margin: 120px 0px;
 }
 
 .headingContainer h1 {
@@ -27,11 +27,8 @@
 }
 
 @media (max-width: 768px) {
-  .projectContainer {
+  .main {
     margin: 0 20px;
-  }
-  .headingContainer {
-    margin: 120px 30px;
   }
 }
 
@@ -39,9 +36,5 @@
   .headingContainer h1,
   .headingContainer h1 p {
     font-size: 16px;
-  }
-
-  .projectContainer {
-    margin: 0;
   }
 }

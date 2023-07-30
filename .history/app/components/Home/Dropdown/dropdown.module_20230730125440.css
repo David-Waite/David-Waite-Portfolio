@@ -63,6 +63,9 @@
   .dropdown {
     font-size: 16px;
     width: 108px;
-    left: 20px;
+  }
+
+  .select {
+    top: -21px;
   }
 }

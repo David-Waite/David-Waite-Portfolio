@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main>
+    <main className={styles.main}>
       <div className={styles.headingContainer}>
         <h1>Hello, hello. I&apos;m David</h1>
         <p>

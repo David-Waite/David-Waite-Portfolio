@@ -147,4 +147,8 @@
   .projectsCard {
     border-radius: 0;
   }
+
+  .projectsGrid {
+    gap: 10px;
+  }
 }

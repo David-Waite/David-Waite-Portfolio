@@ -30,18 +30,11 @@
   .projectContainer {
     margin: 0 20px;
   }
-  .headingContainer {
-    margin: 120px 30px;
-  }
 }
 
 @media (max-width: 425px) {
   .headingContainer h1,
   .headingContainer h1 p {
     font-size: 16px;
-  }
-
-  .projectContainer {
-    margin: 0;
   }
 }
