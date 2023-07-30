@@ -119,9 +119,9 @@ export default function AboutMain() {
             <a href="www.linkedin.com/in/davidwaitedev" target="_blank">
               LinkedIn
             </a>
-            <a href="https://www.instagram.com/davidwaitedev/" target="_blank">
-              Instagram
-            </a>
+            {/* <a href="https://www.instagram.com/david__waite/" target="_blank">
+            Instagram
+          </a> */}
           </div>
         </div>
         <div className={styles.imageContainer}>

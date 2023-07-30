@@ -116,9 +116,7 @@ export default function AboutMain() {
             <a href="https://github.com/David-Waite" target="_blank">
               GitHub
             </a>
-            <a href="www.linkedin.com/in/davidwaitedev" target="_blank">
-              LinkedIn
-            </a>
+
             <a href="https://www.instagram.com/davidwaitedev/" target="_blank">
               Instagram
             </a>
