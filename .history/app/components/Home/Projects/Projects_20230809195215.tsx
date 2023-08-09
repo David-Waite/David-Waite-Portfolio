@@ -11,9 +11,9 @@ export default function About() {
       title: "Video Button",
       image: "/videoButton.webp",
       imageAlt: "Video Button",
-      link: "main--relaxed-haupia-364867.netlify.app",
-      description: "Resizing video button",
-      madeWith: ["Next.js"],
+      link: "https://main--relaxed-haupia-364867.netlify.app/",
+      description: "An app to help with spelling",
+      madeWith: ["React Native", "expo"],
     },
 
     {

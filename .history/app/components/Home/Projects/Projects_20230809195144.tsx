@@ -8,12 +8,12 @@ import { useState } from "react";
 export default function About() {
   const projects: any = [
     {
-      title: "Video Button",
-      image: "/videoButton.webp",
-      imageAlt: "Video Button",
-      link: "main--relaxed-haupia-364867.netlify.app",
-      description: "Resizing video button",
-      madeWith: ["Next.js"],
+      title: "Simply Spell",
+      image: "/simplySpell.webp",
+      imageAlt: "Simply Spell",
+      link: "main--radiant-pasca-39ceb4.netlify.app",
+      description: "An app to help with spelling",
+      madeWith: ["React Native", "expo"],
     },
 
     {
