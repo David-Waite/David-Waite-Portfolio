@@ -48,7 +48,7 @@ export default function AboutMain() {
       <h1 id="aboutHeading">My Education</h1>
       <ul className={`${styles.description} ${styles.descriptionList} `}>
         <li>
-          CT50220 Diploma of Information Technology (Front End Web Development)
+          CT50220 Dimploma of Information Technology (Front End Web Development)
           | 2022
         </li>
         <li>BA-CS Bachelor of Computer Science | 2023 - current</li>

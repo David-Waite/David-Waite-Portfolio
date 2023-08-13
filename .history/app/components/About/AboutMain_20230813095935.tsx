@@ -37,6 +37,18 @@ export default function AboutMain() {
         I didn&apos;t truly get into it until 2022, when I took a course on
         Front-End Web Development at Swinburne University.
         <br />
+        <br /> I am currently in my second year studying computer science while
+        working on a personal project and freelancing on the side. I was born
+        and raised in rural Australia. Never having internet at home whilst
+        growing up, I always went to the local library to use their Wi-Fi. Given
+        how slow the internet there was, I was always fascinated by sites that
+        loaded quickly. This fascination, paired with my enjoyment of clean web
+        designs is what fuels my passion for web development.
+        <br />
+        <br /> I started playing around with web development a few years ago but
+        I didn&apos;t truly get into it until 2022, when I started taking a
+        course on Front-End Web Development at Swinburne University.
+        <br />
         <br /> I am now in my second year of Computer Science, whilst working on
         a personal project and freelancing on the side.
       </p>
@@ -48,7 +60,7 @@ export default function AboutMain() {
       <h1 id="aboutHeading">My Education</h1>
       <ul className={`${styles.description} ${styles.descriptionList} `}>
         <li>
-          CT50220 Diploma of Information Technology (Front End Web Development)
+          CT50220 Dimploma of Information Technology (Front End Web Development)
           | 2022
         </li>
         <li>BA-CS Bachelor of Computer Science | 2023 - current</li>
