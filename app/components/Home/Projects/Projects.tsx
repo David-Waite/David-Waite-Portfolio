@@ -6,7 +6,32 @@ import Dropdown from "../Dropdown/Dropdown";
 import { useState } from "react";
 
 export default function About() {
-  const projects: any = [
+  const all: any = [
+    {
+      title: "Fifth Layer Music mock website",
+      image: "/FifthLayerMusic.webp",
+      imageAlt: "Fifth layer music home",
+      link: "fifth-layer-music.vercel.app",
+      description: "A platform for musicians to do what they do best",
+      madeWith: ["Next.Js"],
+    },
+    {
+      title: "www.edable.org.au",
+      image: "/EdAble.webp",
+      imageAlt: "Edable Home",
+      link: "www.edable.org.au",
+      description:
+        "A charity working on employing and educating in the field of autism",
+      madeWith: ["Next.Js", "Contentful"],
+    },
+    {
+      title: "www.cassiefleming.com",
+      image: "/CassieFleming.webp",
+      imageAlt: "Cassie Fleming illustrations",
+      link: "www.cassiefleming.com",
+      description: "An animation portfolio",
+      madeWith: ["Next.Js", "Contentful"],
+    },
     {
       title: "Video Button",
       image: "/videoButton.webp",
@@ -66,9 +91,18 @@ export default function About() {
     },
   ];
 
-  const work: any = [
+  const featured: any = [
     {
-      title: "fifth-layer-music.vercel.app",
+      title: "A Trip to Pomodoro",
+      image: "/aTripToPomodoro.webp",
+      imageAlt: "A Trip to Pomodoro",
+      link: "/atriptopomodoro.netlify.app/",
+      description:
+        "A Pomodoro timer. Unlock different backgrounds and cars the more you study",
+      madeWith: ["Vue.js", "firebase"],
+    },
+    {
+      title: "Fifth Layer Music mock website",
       image: "/FifthLayerMusic.webp",
       imageAlt: "Fifth layer music home",
       link: "fifth-layer-music.vercel.app",
@@ -85,6 +119,14 @@ export default function About() {
       madeWith: ["Next.Js", "Contentful"],
     },
     {
+      title: "Simply Spell",
+      image: "/simplySpell.webp",
+      imageAlt: "Simply Spell",
+      link: "main--radiant-pasca-39ceb4.netlify.app",
+      description: "An app to help with spelling",
+      madeWith: ["React Native", "expo"],
+    },
+    {
       title: "www.cassiefleming.com",
       image: "/CassieFleming.webp",
       imageAlt: "Cassie Fleming illustrations",
@@ -95,8 +137,8 @@ export default function About() {
   ];
 
   const [dropdown, setDropdown] = useState({
-    selected: "Work",
-    unselected: "Projects",
+    selected: "Featured",
+    unselected: "All",
   });
 
   function handleSelect() {
@@ -107,7 +149,7 @@ export default function About() {
       };
     });
   }
-  const data = dropdown.selected === "Projects" ? projects : work;
+  const data = dropdown.selected === "All" ? all : featured;
 
   const projectCardsElement: any = data.map((item: any) => {
     return (

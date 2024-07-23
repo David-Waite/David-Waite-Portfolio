@@ -6,16 +6,28 @@
   justify-content: center;
 }
 
-.container h1 {
+.container h1,
+.container a {
   color: var(--back);
   font-weight: 500;
   font-size: 18px;
-  margin-bottom: 8px;
+
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 4px;
+}
+.container h1 {
+  margin-bottom: 16px;
+}
+.container svg {
+  height: 20px;
+  width: 20px;
 }
 
 .container p {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   font-weight: 400;
   color: var(--grey);
   font-size: 18px;

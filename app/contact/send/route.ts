@@ -37,6 +37,7 @@ export async function POST(request: Request) {
       };
     })
     .catch((error) => {
+      console.log(error);
       response = {
         status: "error",
         message: `Message failed to send with error, ${error}`,
