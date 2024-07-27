@@ -1,8 +1,18 @@
+"use client";
+import { useEffect } from "react";
 import Projects from "./components/Home/Projects/Projects";
 import styles from "./page.module.css";
 import Script from "next/script";
 
 export default function Home() {
+  useEffect(() => {
+    fetch(
+      "https://secure.api.commbank.com.au/api/cds-au/v1/banking/accounts/10387630/balance"
+    )
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error(error));
+  }, []);
   return (
     <main>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-KP0WJ2LYPC" />

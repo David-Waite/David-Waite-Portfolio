@@ -8,6 +8,24 @@ import { useState } from "react";
 export default function About() {
   const all: any = [
     {
+      title: "2048 Clone",
+      image: "/2048.webp",
+      imageAlt: "2048 Clone",
+      link: "/davidwaite2048clone.netlify.app/",
+      description: "Clone of the popular 2048 game",
+      madeWith: ["React"],
+    },
+    {
+      title: "A Trip to Pomodoro",
+      image: "/aTripToPomodoro.webp",
+      imageAlt: "A Trip to Pomodoro",
+      link: "/atriptopomodoro.netlify.app/",
+      description:
+        "A Pomodoro timer. Unlock different backgrounds and cars the more you study",
+      madeWith: ["Vue.js", "firebase"],
+    },
+
+    {
       title: "Fifth Layer Music mock website",
       image: "/FifthLayerMusic.webp",
       imageAlt: "Fifth layer music home",
@@ -92,6 +110,14 @@ export default function About() {
   ];
 
   const featured: any = [
+    {
+      title: "2048 Clone",
+      image: "/2048.webp",
+      imageAlt: "2048 Clone",
+      link: "/davidwaite2048clone.netlify.app/",
+      description: "Clone of the popular 2048 game",
+      madeWith: ["React"],
+    },
     {
       title: "A Trip to Pomodoro",
       image: "/aTripToPomodoro.webp",
