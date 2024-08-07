@@ -27,18 +27,11 @@ export default function AboutMain() {
     <>
       <h1 id="aboutHeading">G&apos;day, I&apos;m David.</h1>
       <p className={styles.description}>
-        I was born and raised in rural Australia. Never having internet at home
-        growing up I always went to the local library to use their Wi-Fi. Given
-        the slow internet there I always was fascinated by sites that loaded
-        quickly. This and my enjoyment of clean designs fuels my passion for web
-        development
-        <br />
-        <br /> I started playing around with web development a few years ago but
-        I didn&apos;t truly get into it until 2022, when I took a course on
-        Front-End Web Development at Swinburne University.
-        <br />
-        <br /> I am now in my second year of Computer Science, whilst working on
-        a personal project and freelancing on the side.
+        Third year computer science student at Swinburne University of
+        Technology. I have a passion for creating things with code and enjoy
+        good UX design. I want to work on building solutions to fix real world
+        problems. Feel free to contact me, I&apos;m always looking for new
+        projects
       </p>
     </>
   );
@@ -70,13 +63,20 @@ export default function AboutMain() {
     <>
       <h1 id="aboutHeading">What I&apos;m confortable with</h1>
       <ul className={`${styles.description} ${styles.descriptionList} `}>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Next.Js</li>
-        <li>Contentful</li>
-        <li>React.Js</li>
-        <li>JavaScript</li>
-        <li>C#</li>
+        <div className={styles.skillList}>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Next.Js</li>
+          <li>Vue.js</li>
+          <li>Css</li>
+          <li>Node.js</li>
+          <li>SQL</li>
+          <li>Figma</li>
+          <li>REST API&apos;s</li>
+          <li>UX desgin</li>
+          <li>C#</li>
+          <li>C++</li>
+        </div>
       </ul>
     </>
   );
@@ -102,7 +102,7 @@ export default function AboutMain() {
             <a href="https://github.com/David-Waite" target="_blank">
               GitHub
             </a>
-            <a href="www.linkedin.com/in/davidwaitedev" target="_blank">
+            <a href="https://www.linkedin.com/in/davidwaite1" target="_blank">
               LinkedIn
             </a>
             <a href="https://www.instagram.com/davidwaitedev/" target="_blank">

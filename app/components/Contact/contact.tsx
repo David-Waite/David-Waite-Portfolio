@@ -53,7 +53,7 @@ export const Contact = () => {
         Davidwaite122@gmail.com
       </h1>
       <h1>
-        <a href="http://www.linkedin.com/in/davidwaitedev" target="_blank">
+        <a href="https://www.linkedin.com/in/davidwaite1" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

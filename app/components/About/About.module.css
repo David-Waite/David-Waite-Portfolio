@@ -23,6 +23,12 @@
   margin-left: 32px;
   margin-right: -32px;
 }
+
+.skillList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .content h1 {
   color: var(--black);
   font-size: 18px;
