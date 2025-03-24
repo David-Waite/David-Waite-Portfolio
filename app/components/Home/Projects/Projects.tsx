@@ -4,9 +4,20 @@ import Image from "next/image";
 import styles from "./projects.module.css";
 import Dropdown from "../Dropdown/Dropdown";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function About() {
-  const all: any = [
+  const all: Array<Object> = [
+    {
+      title: "Flood Watch Bangladesh",
+      image: "/floodWatchBangladesh.webp",
+      imageAlt: "2048 Clone",
+      link: "/FloodWatchBangladesh",
+      inLink: "/FloodWatchBangladesh",
+      description:
+        "A mobile app that provides real-time flood status updates for rivers across Bangladesh.",
+      madeWith: ["React Native", "Firebase"],
+    },
     {
       title: "2048 Clone",
       image: "/2048.webp",
@@ -22,7 +33,7 @@ export default function About() {
       link: "/atriptopomodoro.netlify.app/",
       description:
         "A Pomodoro timer. Unlock different backgrounds and cars the more you study",
-      madeWith: ["Vue.js", "firebase"],
+      madeWith: ["Vue.js", "Firebase"],
     },
 
     {
@@ -111,6 +122,16 @@ export default function About() {
 
   const featured: any = [
     {
+      title: "Flood Watch Bangladesh",
+      image: "/floodWatchBangladesh.webp",
+      imageAlt: "2048 Clone",
+      link: "/FloodWatchBangladesh",
+      inLink: "/FloodWatchBangladesh",
+      description:
+        "A mobile app that provides real-time flood status updates for rivers across Bangladesh.",
+      madeWith: ["React Native", "Firebase"],
+    },
+    {
       title: "2048 Clone",
       image: "/2048.webp",
       imageAlt: "2048 Clone",
@@ -189,13 +210,22 @@ export default function About() {
                   <h2>{item.title}</h2>
                   <p>{item.description}</p>
                   <p className={styles.linkContainer}>
-                    <a
-                      href={`https://${item.link}`}
-                      target="_blank"
-                      className={styles.link}
-                    >
-                      View Website
-                    </a>
+                    {item.inLink ? (
+                      <Link
+                        className={styles.link}
+                        href={"./FloodWatchBangladesh"}
+                      >
+                        View About
+                      </Link>
+                    ) : (
+                      <a
+                        href={`https://${item.link}`}
+                        target="_blank"
+                        className={styles.link}
+                      >
+                        View Website
+                      </a>
+                    )}
                   </p>
                 </div>
 
