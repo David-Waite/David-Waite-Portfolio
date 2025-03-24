@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Flood Watch Bangladesh",
 };
 
-export default function About() {
+export default function FloodWatchBangladesh() {
   return (
     <div className={styles.container}>
       <div className={styles.headingContainer}>

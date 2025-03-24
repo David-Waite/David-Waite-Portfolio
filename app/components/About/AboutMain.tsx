@@ -45,7 +45,7 @@ export default function AboutMain() {
           | 2022
         </li>
         <li>BA-CS Bachelor of Computer Science | 2023 - current</li>
-        <li>Front end developer career path (72hrs) | Scrimba (online)</li>
+        {/* <li>Front end developer career path (72hrs) | Scrimba (online)</li>
         <li>
           React Native - The Practical Guide 2022 (26hrs) | Udemy (online)
         </li>
@@ -55,7 +55,7 @@ export default function AboutMain() {
         </li>
         <li>
           C# Intermediate: Classes, Interfaces and OOP (6hrs) | Udemy (online)
-        </li>
+        </li> */}
       </ul>
     </>
   );

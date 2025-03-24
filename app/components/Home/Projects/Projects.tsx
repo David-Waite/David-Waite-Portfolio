@@ -6,12 +6,22 @@ import Dropdown from "../Dropdown/Dropdown";
 import { useState } from "react";
 import Link from "next/link";
 
-export default function About() {
+export default function Projects() {
   const all: Array<Object> = [
+    {
+      title: "Free Dinner For One",
+      image: "/freeDinnerForoOne.webp",
+      imageAlt: "FreeDinnerForOne",
+      link: "/FreeDinnerForOne",
+      inLink: "/FreeDinnerForOne",
+      description:
+        "A social media-style fitness tracking platform built for a year-long workout competition with friends.",
+      madeWith: ["React", "Firebase"],
+    },
     {
       title: "Flood Watch Bangladesh",
       image: "/floodWatchBangladesh.webp",
-      imageAlt: "2048 Clone",
+      imageAlt: "FloodWatchBangladesh",
       link: "/FloodWatchBangladesh",
       inLink: "/FloodWatchBangladesh",
       description:
@@ -122,9 +132,19 @@ export default function About() {
 
   const featured: any = [
     {
+      title: "Free Dinner For One",
+      image: "/freeDinnerForoOne.webp",
+      imageAlt: "FreeDinnerForOne",
+      link: "/FreeDinnerForOne",
+      inLink: "/FreeDinnerForOne",
+      description:
+        "A social media-style fitness tracking platform built for a year-long workout competition with friends.",
+      madeWith: ["React", "Firebase"],
+    },
+    {
       title: "Flood Watch Bangladesh",
       image: "/floodWatchBangladesh.webp",
-      imageAlt: "2048 Clone",
+      imageAlt: "FloodWatchBangladesh",
       link: "/FloodWatchBangladesh",
       inLink: "/FloodWatchBangladesh",
       description:
@@ -211,10 +231,7 @@ export default function About() {
                   <p>{item.description}</p>
                   <p className={styles.linkContainer}>
                     {item.inLink ? (
-                      <Link
-                        className={styles.link}
-                        href={"./FloodWatchBangladesh"}
-                      >
+                      <Link className={styles.link} href={item.inLink}>
                         View About
                       </Link>
                     ) : (
