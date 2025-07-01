@@ -9,6 +9,22 @@ import Link from "next/link";
 export default function Projects() {
   const all: Array<Object> = [
     {
+      title: "Smart Coaster with Friends",
+      image: "/smartCoasterWithFriends.webp",
+      imageAlt: "Smart Coaster with Friends",
+      link: "/SmartCoasterWithFriends",
+      inLink: "/SmartCoasterWithFriends",
+      description:
+        "An IoT-enabled smart coaster system for friends to track water consumption, receive reminders, and interact via Discord",
+      madeWith: [
+        "IoT",
+        "Arduino",
+        "Raspberry Pi",
+        "Discord API",
+        "ThingsBoard",
+      ],
+    },
+    {
       title: "Free Dinner For One",
       image: "/freeDinnerForoOne.webp",
       imageAlt: "FreeDinnerForOne",
@@ -131,6 +147,22 @@ export default function Projects() {
   ];
 
   const featured: any = [
+    {
+      title: "Smart Coaster with Friends",
+      image: "/smartCoasterWithFriends.webp",
+      imageAlt: "Smart Coaster with Friends",
+      link: "/SmartCoasterWithFriends",
+      inLink: "/SmartCoasterWithFriends",
+      description:
+        "An IoT-enabled smart coaster system for friends to track water consumption, receive reminders, and interact via Discord",
+      madeWith: [
+        "IoT",
+        "Arduino",
+        "Raspberry Pi",
+        "Discord API",
+        "ThingsBoard",
+      ],
+    },
     {
       title: "Free Dinner For One",
       image: "/freeDinnerForoOne.webp",

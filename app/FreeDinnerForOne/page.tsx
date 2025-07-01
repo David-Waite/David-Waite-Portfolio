@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Flood Watch Bangladesh",
+  title: "Free Dinner for One",
 };
 
 export default function FreeDinnerForOne() {
