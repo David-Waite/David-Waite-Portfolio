@@ -67,12 +67,13 @@ export default function SmartCoasterWithFriends() {
           <li>A push button on the system allows for individual actions:</li>
           <ul>
             <li>
-              Single Press: If it's the first press after the device is ready,
-              it starts a new tracking session, resetting the total consumed,
-              starting a new session, and resetting the reminder light to green.
-              If a cup is already on the scale, this action registers a new cup,
-              corrects a mistaken sip recording (by reverting the last sip), and
-              sets the current weight as the new starting weight for a full cup.
+              Single Press: If its&apos;s the first press after the device is
+              ready, it starts a new tracking session, resetting the total
+              consumed, starting a new session, and resetting the reminder light
+              to green. If a cup is already on the scale, this action registers
+              a new cup, corrects a mistaken sip recording (by reverting the
+              last sip), and sets the current weight as the new starting weight
+              for a full cup.
             </li>
             <li>
               Double Press: This action resets the total consumption, starts a
