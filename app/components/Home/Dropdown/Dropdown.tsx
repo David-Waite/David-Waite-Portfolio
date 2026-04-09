@@ -46,10 +46,10 @@ export default function Dropdown(props: { onClick: any; dropdown: any }) {
       >
         {props.dropdown.selected}
         <BiSolidDownArrow
-          style={Object.assign(
-            hover && openSVGStyle,
-            selectTopHover && hoverSVGStyle
-          )}
+          style={{
+            ...(hover ? openSVGStyle : {}),
+            ...(selectTopHover ? hoverSVGStyle : {}),
+          }}
         />
       </div>
       <div

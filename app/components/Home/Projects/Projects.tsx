@@ -250,7 +250,7 @@ export default function Projects() {
   }
   const data = dropdown.selected === "All" ? all : featured;
 
-  const projectCardsElement: any = data.map((item: any) => {
+  const projectCardsElement: any = data.map((item: any, index: number) => {
     return (
       <div key={item.title} className={styles.contaner}>
         <div className={styles.outerContainer}>
@@ -280,7 +280,7 @@ export default function Projects() {
 
                 <ul className={styles.madeWith}>
                   {item.madeWith.map((madewith: any) => (
-                    <li key={item.title}>
+                    <li key={madewith}>
                       {`${madewith}${
                         madewith === item.madeWith[item.madeWith.length - 1]
                           ? ""
@@ -296,6 +296,8 @@ export default function Projects() {
                 src={item.image}
                 alt={item.imageAlt}
                 fill={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1300px) 50vw, 33vw"
+                loading={index === 0 ? "eager" : "lazy"}
               />
             </div>
           </div>

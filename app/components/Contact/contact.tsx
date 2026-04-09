@@ -2,12 +2,10 @@
 
 import { FormEvent, useState } from "react";
 import styles from "./contact.module.css";
-import { useSearchParams } from "next/navigation";
 export const Contact = () => {
   const [message, setMessage] = useState<string>("");
   const [status, setStatus] = useState<string>("idle");
   const [disabled, setDisabled] = useState<boolean>(false);
-  const searchParams = useSearchParams();
 
   const onContactFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
