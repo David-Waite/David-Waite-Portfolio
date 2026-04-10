@@ -250,6 +250,15 @@ export default function Projects() {
   }
   const data = dropdown.selected === "All" ? all : featured;
 
+  function trackClick(project: string, url: string) {
+    const session_id = localStorage.getItem("session_id") ?? undefined;
+    fetch("/api/analytics/click", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ project, url, session_id }),
+    });
+  }
+
   const projectCardsElement: any = data.map((item: any, index: number) => {
     return (
       <div key={item.title} className={styles.contaner}>
@@ -271,6 +280,7 @@ export default function Projects() {
                         href={`https://${item.link}`}
                         target="_blank"
                         className={styles.link}
+                        onClick={() => trackClick(item.title, item.link)}
                       >
                         View Website
                       </a>

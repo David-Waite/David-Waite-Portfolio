@@ -1,0 +1,264 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 30px 80px;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: -0.5px;
+}
+
+.subheading {
+  font-size: 15px;
+  color: var(--grey);
+  margin-top: 6px;
+  margin-bottom: 40px;
+}
+
+/* Stat cards row */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.statCard {
+  background: var(--primary);
+  border-radius: 14px;
+  padding: 22px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statNumber {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+/* Bento grid */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 12px;
+}
+
+/* Cards */
+.card {
+  background: #faf7f0;
+  border-radius: 14px;
+  padding: 24px 26px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  min-width: 0; /* prevent grid blowout from content min-width */
+  overflow: hidden;
+}
+
+.viewsByPage {
+  grid-row: span 2;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 20px;
+  letter-spacing: -0.2px;
+}
+
+/* Bar chart */
+.barChart {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 155px 1fr 34px;
+  align-items: center;
+  gap: 12px;
+}
+
+.barLabel {
+  font-size: 13px;
+  color: var(--black);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.barTrack {
+  background: #e5dfd3;
+  border-radius: 4px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.bar {
+  background: var(--primary);
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  min-width: 4px;
+}
+
+.barCount {
+  font-size: 13px;
+  color: var(--grey);
+  text-align: right;
+}
+
+/* Lists */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--black);
+  padding: 10px 0;
+  border-bottom: 1px solid #e5dfd3;
+}
+
+.listItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.listItem:first-child {
+  padding-top: 0;
+}
+
+.listCount {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 14px;
+}
+
+.referrerText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 190px;
+  display: inline-block;
+}
+
+/* Table */
+.tableWrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table th {
+  text-align: left;
+  padding: 0 12px 12px;
+  color: var(--grey);
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #e5dfd3;
+  position: sticky;
+  top: 0;
+  background: #faf7f0;
+  z-index: 1;
+}
+
+.table td {
+  padding: 11px 12px;
+  color: var(--black);
+  border-bottom: 1px solid #e5dfd3;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background: rgba(0, 0, 0, 0.025);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .statsRow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .viewsByPage {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .statsRow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Last card spans full width when it would be orphaned */
+  .statCard:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .barRow {
+    grid-template-columns: 100px 1fr 26px;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    padding: 28px 16px 48px;
+  }
+
+  .statsRow {
+    gap: 12px;
+  }
+
+  .statNumber {
+    font-size: 28px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+}

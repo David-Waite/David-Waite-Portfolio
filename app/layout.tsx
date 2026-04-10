@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NavBar from "./components/Nav/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import PageViewTracker from "./components/PageViewTracker/PageViewTracker";
+import LiveIndicator from "./components/Nav/LiveIndicator/LiveIndicator";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +24,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <PageViewTracker />
+        <LiveIndicator />
         <NavBar />
         <div className="content">{children}</div>
         <Footer />
