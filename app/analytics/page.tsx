@@ -14,6 +14,7 @@ type PageView = {
   referrer: string;
   device: string;
   country: string;
+  session_id: string;
   created_at: string;
 };
 
