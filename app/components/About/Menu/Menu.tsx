@@ -2,8 +2,8 @@
 import styles from "./menu.module.css";
 
 export default function Menu(props: {
-  onClick: any;
-  selected: any;
+  onClick: (s: string) => void;
+  selected: { about: boolean; education: boolean; technologies: boolean };
   mobile: boolean;
 }) {
   function handleClick(select: string) {

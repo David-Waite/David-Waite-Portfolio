@@ -87,7 +87,7 @@
 .moblie {
   display: none;
 }
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .menu {
     top: calc((100vh - 70px) / 2);
     z-index: 4;

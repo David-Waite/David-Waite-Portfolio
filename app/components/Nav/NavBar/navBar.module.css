@@ -4,6 +4,11 @@
   justify-content: space-between;
   height: 70px;
   padding: 0 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--background);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 
 .name {

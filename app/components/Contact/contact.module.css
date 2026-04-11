@@ -8,29 +8,31 @@
 
 .container h1,
 .container a {
-  color: var(--back);
+  color: var(--black);
   font-weight: 500;
-  font-size: 18px;
-
+  font-size: 22px;
+  letter-spacing: -0.3px;
   display: flex;
   align-items: center;
   text-decoration: none;
-  gap: 4px;
+  gap: 8px;
 }
 .container h1 {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 .container svg {
-  height: 20px;
-  width: 20px;
+  height: 22px;
+  width: 22px;
+  flex-shrink: 0;
 }
 
 .container p {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   font-weight: 400;
   color: var(--grey);
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .container form {
@@ -163,10 +165,13 @@
 
 @media (max-width: 425px) {
   .container h1,
+  .container a {
+    font-size: 18px;
+  }
   .container p,
   .message textarea,
   .inputCon input {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .container form button,
