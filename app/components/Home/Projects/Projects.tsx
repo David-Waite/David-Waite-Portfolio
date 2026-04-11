@@ -2,27 +2,17 @@
 
 import Image from "next/image";
 import styles from "./projects.module.css";
-import Dropdown from "../Dropdown/Dropdown";
 import { useState } from "react";
 import Link from "next/link";
 import { projects, type Project } from "@/data/projects";
+import SegmentedToggle from "@/app/components/SegmentedToggle/SegmentedToggle";
 
 const featuredProjects = projects.filter((p) => p.featured);
 
 export default function Projects() {
-  const [dropdown, setDropdown] = useState({
-    selected: "Featured",
-    unselected: "All",
-  });
+  const [showAll, setShowAll] = useState(false);
 
-  function handleSelect() {
-    setDropdown((prev) => ({
-      selected: prev.unselected,
-      unselected: prev.selected,
-    }));
-  }
-
-  const data: Project[] = dropdown.selected === "All" ? projects : featuredProjects;
+  const data: Project[] = showAll ? projects : featuredProjects;
 
   function trackClick(project: string, url: string) {
     const session_id = localStorage.getItem("session_id") ?? undefined;
@@ -94,7 +84,12 @@ export default function Projects() {
 
   return (
     <>
-      <Dropdown onClick={handleSelect} dropdown={dropdown} />
+      <SegmentedToggle
+        options={["Featured", "All"]}
+        selected={showAll ? "All" : "Featured"}
+        onChange={(val) => setShowAll(val === "All")}
+        className={styles.toggleSpacing}
+      />
       <div className={styles.projectsGrid}>{projectCardsElement}</div>
     </>
   );

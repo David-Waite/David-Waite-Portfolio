@@ -1,9 +1,22 @@
 .container {
+  --indicator-right: 30px;
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: calc(var(--indicator-right) + 0px); /* overridden by inline style */
   z-index: 50;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    --indicator-right: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    --indicator-right: 16px;
+  }
 }
 
 .dot {
