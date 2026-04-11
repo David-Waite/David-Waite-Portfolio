@@ -814,17 +814,20 @@
         <div class="type-row">
           <div class="type-meta">
             <span class="type-label">Article H2</span>
-            <span class="type-spec">22px / 700</span>
+            <span class="type-spec">26px / 700</span>
+            <span class="type-spec">letter-spacing: -0.3px</span>
+            <span class="type-spec">margin-top: 56px</span>
           </div>
-          <div style="font-size:22px; font-weight:700;">How it was built</div>
+          <div style="font-size:26px; font-weight:700; letter-spacing:-0.3px;">How it was built</div>
         </div>
 
         <div class="type-row">
           <div class="type-meta">
             <span class="type-label">Article H3</span>
-            <span class="type-spec">18px / 700</span>
+            <span class="type-spec">20px / 600</span>
+            <span class="type-spec">margin-top: 36px</span>
           </div>
-          <div style="font-size:18px; font-weight:700;">Hardware Setup</div>
+          <div style="font-size:20px; font-weight:600;">Hardware Setup</div>
         </div>
 
         <div class="type-row">
@@ -838,7 +841,16 @@
 
         <div class="type-row">
           <div class="type-meta">
-            <span class="type-label">Body / Article</span>
+            <span class="type-label">Article Body</span>
+            <span class="type-spec">19px / 400</span>
+            <span class="type-spec">line-height: 1.75</span>
+          </div>
+          <div style="font-size:19px; font-weight:400; line-height:1.75; max-width:480px; color:var(--black);">An IoT-enabled smart coaster system for friends to track water consumption, receive reminders, and interact via Discord.</div>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-label">Card Body</span>
             <span class="type-spec">18px / 400</span>
             <span class="type-spec">line-height: 27px</span>
           </div>
@@ -1072,8 +1084,26 @@
           <p>IoT · React · Firebase</p>
           <a class="btn-on-dark" href="#" style="margin-top:8px;">View Website</a>
         </div>
-        <span style="font-size:13px; color:var(--grey); max-width:300px;">Background: --primary<br/>Radius: 30px desktop / 16px mobile<br/>Hover reveals project info, image fades out.<br/>3-col → 2-col → 1-col grid.</span>
+        <span style="font-size:13px; color:var(--grey); max-width:300px;">Background: --primary<br/>Radius: 28px — all breakpoints.<br/>Padding 20px → inner image radius 8px (box-in-box rule).<br/>Hover reveals project info, image fades out.<br/>3-col → 2-col → 1-col grid.</span>
       </div>
+
+      <!-- Article page header -->
+      <p class="demo-label" style="margin-top:40px;">Project Article Page Header</p>
+      <div style="background:var(--background); padding:32px; border-radius:14px; border:1px solid var(--border);">
+        <div style="font-size:42px; font-weight:700; letter-spacing:-0.5px; color:var(--black); line-height:1.15; margin-bottom:24px;">Smart Coaster with Friends</div>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px; margin-bottom:28px;">
+          <div style="display:flex; flex-wrap:wrap; gap:6px;">
+            <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:500; padding:3px 11px; border-radius:999px;">IoT</span>
+            <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:500; padding:3px 11px; border-radius:999px;">Arduino</span>
+            <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:500; padding:3px 11px; border-radius:999px;">Raspberry Pi</span>
+          </div>
+          <a href="#" style="display:inline-flex; align-items:center; color:var(--black); text-decoration:none; font-size:13px; font-weight:500; border:1.5px solid rgba(25,29,27,0.2); padding:5px 13px; border-radius:6px;">View on GitHub</a>
+        </div>
+        <hr style="border:none; border-top:1px solid #e0d9cc; margin:0 0 32px;" />
+        <div style="font-size:26px; font-weight:700; color:var(--black); letter-spacing:-0.3px; margin-bottom:12px;">Overview</div>
+        <div style="font-size:19px; color:var(--black); line-height:1.75; max-width:560px;">The Smart Coaster with Friends is an IoT-enabled device designed to track water consumption and provide timely hydration reminders. It integrates with Discord, allowing friends to motivate each other.</div>
+      </div>
+      <div style="font-size:13px; color:var(--grey); margin-top:10px;">Max-width 720px · Route: <code>/projects/[slug]</code> · CSS: <code>app/projects/[slug]/page.module.css</code></div>
 
     </section>
 

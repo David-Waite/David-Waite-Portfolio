@@ -1,0 +1,207 @@
+/* ── Layout ─────────────────────────── */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Header ─────────────────────────── */
+.header {
+  padding: 56px 0 32px;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--black);
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 11px;
+  border-radius: 999px;
+  letter-spacing: 0.2px;
+}
+
+.githubLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--black);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1.5px solid rgba(25, 29, 27, 0.2);
+  padding: 5px 13px;
+  border-radius: 6px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.githubLink:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ── Divider ────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid #e0d9cc;
+  margin: 0 0 48px;
+}
+
+/* ── Article body ───────────────────── */
+.article h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--black);
+  margin-top: 56px;
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+}
+
+.article h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black);
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+
+.article p {
+  font-size: 19px;
+  line-height: 1.75;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.article ul {
+  padding-left: 24px;
+  margin: 0 0 20px 0;
+}
+
+.article li {
+  font-size: 19px;
+  line-height: 1.75;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.article ul ul {
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+/* ── Figures & images ───────────────── */
+.figure {
+  margin: 32px 0;
+}
+
+.articleImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.caption {
+  font-size: 13px;
+  color: var(--grey);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ── Video ──────────────────────────── */
+.videoContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.videoContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ── Responsive ─────────────────────── */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .header {
+    padding: 40px 0 28px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .article h2 {
+    font-size: 22px;
+    margin-top: 44px;
+  }
+
+  .article h3 {
+    font-size: 18px;
+    margin-top: 28px;
+  }
+
+  .article p,
+  .article li {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .header {
+    padding: 32px 0 24px;
+  }
+
+  .title {
+    font-size: 26px;
+    letter-spacing: -0.3px;
+  }
+
+  .article h2 {
+    font-size: 20px;
+  }
+
+  .article h3 {
+    font-size: 17px;
+  }
+
+  .article p,
+  .article li {
+    font-size: 16px;
+  }
+}

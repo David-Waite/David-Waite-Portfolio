@@ -9,10 +9,10 @@ export default function NavBar() {
 
   return (
     <nav className={styles.container}>
+      <Link href="/" className={styles.name}>
+        David Waite
+      </Link>
       <div className={styles.links}>
-        <Link href="/" className={`${styles.link} ${pathname === "/" ? styles.active : ""}`}>
-          Home
-        </Link>
         <Link href="/about" className={`${styles.link} ${pathname === "/about" ? styles.active : ""}`}>
           About
         </Link>
