@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Waite Portfolio — Style Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Variables ── */
+    :root {
+      --primary:    #255b48;
+      --background: #f3eddf;
+      --black:      #191d1b;
+      --white:      #ffffff;
+      --grey:       #606060;
+      --error:      #a83c23;
+      --surface:    #faf7f0;
+      --border:     rgba(0,0,0,0.06);
+      --divider:    #e5dfd3;
+
+      --radius-sm:  8px;
+      --radius-md:  14px;
+      --radius-lg:  30px;
+      --radius-pill: 20px;
+
+      --space-4:  4px;
+      --space-8:  8px;
+      --space-12: 12px;
+      --space-16: 16px;
+      --space-20: 20px;
+      --space-24: 24px;
+      --space-30: 30px;
+      --space-40: 40px;
+      --space-48: 48px;
+      --space-60: 60px;
+      --space-80: 80px;
+    }
+
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--background);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    /* ── Layout ── */
+    .guide-nav {
+      position: sticky;
+      top: 0;
+      background: var(--primary);
+      color: var(--white);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 52px;
+      z-index: 100;
+    }
+
+    .guide-nav h1 {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .guide-nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .guide-nav-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.15s;
+    }
+
+    .guide-nav-links a:hover { color: var(--white); }
+
+    .guide-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 40px 120px;
+    }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 80px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .section-desc {
+      font-size: 15px;
+      color: var(--grey);
+      margin-bottom: 32px;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--divider);
+      margin-bottom: 32px;
+    }
+
+    /* ── Color Palette ── */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .color-card {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .color-swatch {
+      height: 100px;
+    }
+
+    .color-info {
+      background: var(--surface);
+      padding: 12px 14px;
+    }
+
+    .color-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 2px;
+    }
+
+    .color-var {
+      font-size: 12px;
+      color: var(--grey);
+      font-family: monospace;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .color-hex {
+      font-size: 12px;
+      color: var(--grey);
+      font-family: monospace;
+    }
+
+    .color-usage {
+      font-size: 11px;
+      color: var(--grey);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    /* ── Typography ── */
+    .type-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .type-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      align-items: baseline;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--divider);
+      gap: 24px;
+    }
+
+    .type-row:last-child { border-bottom: none; }
+
+    .type-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .type-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--grey);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .type-spec {
+      font-size: 11px;
+      color: var(--grey);
+      font-family: monospace;
+    }
+
+    /* ── Spacing ── */
+    .space-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .space-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .space-bar-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .space-bar {
+      background: var(--primary);
+      height: 24px;
+      border-radius: 4px;
+      opacity: 0.8;
+    }
+
+    .space-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--black);
+      width: 50px;
+      font-family: monospace;
+    }
+
+    .space-usage {
+      font-size: 12px;
+      color: var(--grey);
+    }
+
+    /* ── Radius ── */
+    .radius-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .radius-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      width: 120px;
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .radius-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    .radius-spec {
+      font-size: 11px;
+      color: var(--grey);
+      font-family: monospace;
+    }
+
+    .radius-usage {
+      font-size: 10px;
+      color: var(--grey);
+    }
+
+    /* ── Breakpoints ── */
+    .bp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .bp-row {
+      display: grid;
+      grid-template-columns: 100px 100px 1fr;
+      align-items: center;
+      gap: 20px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .bp-row:last-child { border-bottom: none; }
+
+    .bp-width {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary);
+      font-family: monospace;
+    }
+
+    .bp-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    .bp-desc {
+      font-size: 13px;
+      color: var(--grey);
+    }
+
+    .bp-bar-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      grid-column: 1 / -1;
+      margin-top: -8px;
+      margin-bottom: 4px;
+    }
+
+    /* ── Component Demos ── */
+    .demo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      padding: 24px;
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      margin-bottom: 12px;
+    }
+
+    .demo-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: 8px;
+    }
+
+    /* ── Actual Components ── */
+
+    /* Pill tag */
+    .tag-pill {
+      background: var(--primary);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 4px 24px;
+      border-radius: var(--radius-pill);
+      display: inline-block;
+    }
+
+    /* Primary button */
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      transition: opacity 0.15s;
+    }
+
+    .btn-primary:hover { opacity: 0.85; }
+
+    /* Outline button */
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 18px;
+      border-radius: 4px;
+      border: 2px solid var(--primary);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    /* Nav button */
+    .btn-nav {
+      background: transparent;
+      color: var(--black);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 6px;
+      border: 1.5px solid var(--black);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn-nav:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /* View website outline button (on dark bg) */
+    .btn-on-dark {
+      background: transparent;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: 3px;
+      border: 2px solid var(--white);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn-on-dark:hover {
+      background: var(--white);
+      color: var(--primary);
+    }
+
+    .dark-bg {
+      background: var(--primary);
+      padding: 24px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    /* Cards */
+    .card-demo {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px 26px;
+      min-width: 220px;
+    }
+
+    .card-demo-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+
+    .card-demo-body {
+      font-size: 13px;
+      color: var(--grey);
+      line-height: 1.6;
+    }
+
+    /* Project card */
+    .project-card-demo {
+      background: var(--primary);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      min-width: 200px;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .project-card-demo h3 {
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .project-card-demo p {
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* Stat card */
+    .stat-card-demo {
+      background: var(--primary);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      min-width: 130px;
+    }
+
+    .stat-number {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+      margin-top: 4px;
+    }
+
+    /* Nav demo */
+    .nav-demo {
+      background: var(--background);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 0 30px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 52px;
+      gap: 28px;
+      margin-bottom: 12px;
+    }
+
+    .nav-link {
+      font-size: 14px;
+      color: var(--black);
+      text-decoration: none;
+      font-weight: 400;
+      position: relative;
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 1px;
+    }
+
+    /* Live dot */
+    .live-dot {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #22c55e;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(34,197,94,0.6); }
+      70%  { box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+      100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+    }
+
+    .live-label {
+      font-size: 13px;
+      color: var(--black);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 99px;
+    }
+
+    /* ── Do/Don't ── */
+    .do-dont-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .do-box, .dont-box {
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      border: 1px solid;
+    }
+
+    .do-box {
+      background: rgba(37,91,72,0.06);
+      border-color: rgba(37,91,72,0.2);
+    }
+
+    .dont-box {
+      background: rgba(168,60,35,0.06);
+      border-color: rgba(168,60,35,0.2);
+    }
+
+    .do-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .dont-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--error);
+      margin-bottom: 10px;
+    }
+
+    .do-dont-text {
+      font-size: 13px;
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    .do-dont-text li {
+      margin-left: 16px;
+      margin-bottom: 4px;
+    }
+
+    /* ── Footer ── */
+    .guide-footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 12px;
+      color: var(--grey);
+      border-top: 1px solid var(--divider);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="guide-nav">
+    <h1>Style Guide</h1>
+    <ul class="guide-nav-links">
+      <li><a href="#colors">Colors</a></li>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#spacing">Spacing</a></li>
+      <li><a href="#radius">Radius</a></li>
+      <li><a href="#components">Components</a></li>
+      <li><a href="#breakpoints">Breakpoints</a></li>
+      <li><a href="#box-in-box">Box-in-Box</a></li>
+      <li><a href="#guidelines">Guidelines</a></li>
+    </ul>
+  </nav>
+
+  <div class="guide-container">
+
+    <!-- ─────────────────────────────────── -->
+    <!-- Hero -->
+    <!-- ─────────────────────────────────── -->
+    <div style="margin-bottom: 80px; padding-top: 8px;">
+      <p class="section-label">David Waite Portfolio</p>
+      <h1 style="font-size:42px; font-weight:700; letter-spacing:-1px; margin-bottom:12px;">Style Guide</h1>
+      <p style="font-size:16px; color:var(--grey); max-width:520px; line-height:1.7;">
+        A living reference for colours, typography, spacing, and components.
+        Use this to keep the portfolio consistent as it grows.
+      </p>
+    </div>
+
+    <!-- ─────────────────────────────────── -->
+    <!-- Colors -->
+    <!-- ─────────────────────────────────── -->
+    <section class="section" id="colors">
+      <p class="section-label">01 — Foundation</p>
+      <h2 class="section-title">Colours</h2>
+      <p class="section-desc">All colours are defined as CSS custom properties in <code>globals.css</code>. Never use raw hex values in component CSS — always reference the variable.</p>
+      <hr class="divider" />
+
+      <div class="color-grid">
+
+        <div class="color-card">
+          <div class="color-swatch" style="background:#255b48;"></div>
+          <div class="color-info">
+            <div class="color-name">Primary</div>
+            <code class="color-var">--primary</code>
+            <code class="color-hex">#255b48</code>
+            <p class="color-usage">Buttons, project cards, stat cards, active states, brand accents. The dominant action colour.</p>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background:#f3eddf;"></div>
+          <div class="color-info">
+            <div class="color-name">Background</div>
+            <code class="color-var">--background</code>
+            <code class="color-hex">#f3eddf</code>
+            <p class="color-usage">Page background. The warm cream that defines the site's character. Never use pure white for backgrounds.</p>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background:#faf7f0; border-bottom:1px solid #e5dfd3;"></div>
+          <div class="color-info">
+            <div class="color-name">Surface</div>
+            <code class="color-var">--surface</code>
+            <code class="color-hex">#faf7f0</code>
+            <p class="color-usage">Card backgrounds. A step lighter than the page background, stays warm. Defined locally in analytics CSS — add to globals if used elsewhere.</p>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background:#191d1b;"></div>
+          <div class="color-info">
+            <div class="color-name">Black</div>
+            <code class="color-var">--black</code>
+            <code class="color-hex">#191d1b</code>
+            <p class="color-usage">Body text, headings, primary content. Slightly warm (not pure black) — matches the cream background.</p>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background:#606060;"></div>
+          <div class="color-info">
+            <div class="color-name">Grey</div>
+            <code class="color-var">--grey</code>
+            <code class="color-hex">#606060</code>
+            <p class="color-usage">Subheadings, captions, secondary text, table column headers, metadata.</p>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background:#ffffff; border-bottom:1px solid #e5dfd3;"></div>
+          <div class="color-info">
+            <div class="color-name">White</div>
+            <code class="color-var">--white</code>
+            <code class="color-hex">#ffffff</code>
+            <p class="color-usage">Text on dark (primary) backgrounds. Avoid for page/card backgrounds — use --background or --surface instead.</p>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background:#a83c23;"></div>
+          <div class="color-info">
+            <div class="color-name">Error</div>
+            <code class="color-var">--error</code>
+            <code class="color-hex">#a83c23</code>
+            <p class="color-usage">Form validation errors, destructive actions. Not currently used but reserved.</p>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background:#22c55e;"></div>
+          <div class="color-info">
+            <div class="color-name">Live Green</div>
+            <code class="color-var">(hardcoded)</code>
+            <code class="color-hex">#22c55e</code>
+            <p class="color-usage">Live indicator dot only. One-off — no variable needed. Do not use for other purposes.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────── -->
+    <!-- Typography -->
+    <!-- ─────────────────────────────────── -->
+    <section class="section" id="typography">
+      <p class="section-label">02 — Foundation</p>
+      <h2 class="section-title">Typography</h2>
+      <p class="section-desc">Font family is <strong>Inter</strong> (Google Fonts, latin subset) applied globally via Next.js font optimisation. All weights below are in active use.</p>
+      <hr class="divider" />
+
+      <div class="type-stack">
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-label">Page Title</span>
+            <span class="type-spec">36–42px / 700</span>
+            <span class="type-spec">letter-spacing: -0.5px</span>
+          </div>
+          <div style="font-size:42px; font-weight:700; letter-spacing:-0.5px; line-height:1.1;">David Waite</div>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-label">Section Heading</span>
+            <span class="type-spec">28–36px / 700</span>
+            <span class="type-spec">letter-spacing: -0.5px</span>
+          </div>
+          <div style="font-size:36px; font-weight:700; letter-spacing:-0.5px;">Analytics</div>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-label">Article H2</span>
+            <span class="type-spec">22px / 700</span>
+          </div>
+          <div style="font-size:22px; font-weight:700;">How it was built</div>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-label">Article H3</span>
+            <span class="type-spec">18px / 700</span>
+          </div>
+          <div style="font-size:18px; font-weight:700;">Hardware Setup</div>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-label">Card Title</span>
+            <span class="type-spec">16px / 600</span>
+            <span class="type-spec">letter-spacing: -0.2px</span>
+          </div>
+          <div style="font-size:16px; font-weight:600; letter-spacing:-0.2px;">Views by Page</div>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-label">Body / Article</span>
+            <span class="type-spec">18px / 400</span>
+            <span class="type-spec">line-height: 27px</span>
+          </div>
+          <div style="font-size:18px; font-weight:400; line-height:27px; max-width:480px; color:var(--grey);">A portfolio site for a web developer who likes to create simple, clean websites that get the user where they need to go.</div>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-label">UI / Label</span>
+            <span class="type-spec">13–15px / 400–500</span>
+          </div>
+          <div style="font-size:14px; font-weight:500;">Nav links, button labels, card metadata</div>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-label">Caption / Meta</span>
+            <span class="type-spec">11–12px / 500–600</span>
+            <span class="type-spec">uppercase + tracking</span>
+          </div>
+          <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:1px; color:var(--grey);">Top Countries</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────── -->
+    <!-- Spacing -->
+    <!-- ─────────────────────────────────── -->
+    <section class="section" id="spacing">
+      <p class="section-label">03 — Foundation</p>
+      <h2 class="section-title">Spacing</h2>
+      <p class="section-desc">Based on a 4px base unit. Prefer values from this scale. The most commonly used values for layout are <strong>16, 20, 24, 30</strong>.</p>
+      <hr class="divider" />
+
+      <div class="space-grid">
+        <div class="space-row">
+          <span class="space-label">4px</span>
+          <div class="space-bar-wrap">
+            <div class="space-bar" style="width:4px;"></div>
+            <span class="space-usage">Icon gaps, tight internal spacing</span>
+          </div>
+        </div>
+        <div class="space-row">
+          <span class="space-label">8px</span>
+          <div class="space-bar-wrap">
+            <div class="space-bar" style="width:8px;"></div>
+            <span class="space-usage">Tag/pill internal gap, small list gaps</span>
+          </div>
+        </div>
+        <div class="space-row">
+          <span class="space-label">12px</span>
+          <div class="space-bar-wrap">
+            <div class="space-bar" style="width:12px;"></div>
+            <span class="space-usage">Grid gap (bento mobile), card internal gaps</span>
+          </div>
+        </div>
+        <div class="space-row">
+          <span class="space-label">16px</span>
+          <div class="space-bar-wrap">
+            <div class="space-bar" style="width:16px;"></div>
+            <span class="space-usage"><strong>Mobile side padding</strong> — the standard for ≤425px viewports across all pages</span>
+          </div>
+        </div>
+        <div class="space-row">
+          <span class="space-label">20px</span>
+          <div class="space-bar-wrap">
+            <div class="space-bar" style="width:20px;"></div>
+            <span class="space-usage">Grid gap (bento desktop), section-to-section gap, tablet side margins</span>
+          </div>
+        </div>
+        <div class="space-row">
+          <span class="space-label">24px</span>
+          <div class="space-bar-wrap">
+            <div class="space-bar" style="width:24px;"></div>
+            <span class="space-usage">Card internal padding (vertical)</span>
+          </div>
+        </div>
+        <div class="space-row">
+          <span class="space-label">30px</span>
+          <div class="space-bar-wrap">
+            <div class="space-bar" style="width:30px;"></div>
+            <span class="space-usage">Desktop side margins, project card grid gap</span>
+          </div>
+        </div>
+        <div class="space-row">
+          <span class="space-label">40px</span>
+          <div class="space-bar-wrap">
+            <div class="space-bar" style="width:40px;"></div>
+            <span class="space-usage">Page subheading margin-bottom, section separators</span>
+          </div>
+        </div>
+        <div class="space-row">
+          <span class="space-label">48px</span>
+          <div class="space-bar-wrap">
+            <div class="space-bar" style="width:48px;"></div>
+            <span class="space-usage">Page container top padding (desktop)</span>
+          </div>
+        </div>
+        <div class="space-row">
+          <span class="space-label">80px</span>
+          <div class="space-bar-wrap">
+            <div class="space-bar" style="width:80px;"></div>
+            <span class="space-usage">Page container bottom padding</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────── -->
+    <!-- Border Radius -->
+    <!-- ─────────────────────────────────── -->
+    <section class="section" id="radius">
+      <p class="section-label">04 — Foundation</p>
+      <h2 class="section-title">Border Radius</h2>
+      <p class="section-desc">Five radius values in use. Pill is reserved for the title tag badge only. Project cards use a single value at all breakpoints — see Box-in-Box for the nested image radius.</p>
+      <hr class="divider" />
+
+      <div class="radius-grid">
+        <div class="radius-card" style="border-radius:4px;">
+          <span class="radius-label">Sharp</span>
+          <code class="radius-spec">4px</code>
+          <span class="radius-usage">Buttons, bar fills</span>
+        </div>
+        <div class="radius-card" style="border-radius:8px;">
+          <span class="radius-label">Small</span>
+          <code class="radius-spec">8px</code>
+          <span class="radius-usage">Tags, chips, project card image container (inner)</span>
+        </div>
+        <div class="radius-card" style="border-radius:14px;">
+          <span class="radius-label">Medium</span>
+          <code class="radius-spec">14px</code>
+          <span class="radius-usage">Analytics cards, stat cards, bento cells</span>
+        </div>
+        <div class="radius-card" style="border-radius:28px;">
+          <span class="radius-label">Large</span>
+          <code class="radius-spec">28px</code>
+          <span class="radius-usage">Project card outer shell — all breakpoints</span>
+        </div>
+        <div class="radius-card" style="border-radius:999px;">
+          <span class="radius-label">Pill</span>
+          <code class="radius-spec">20–999px</code>
+          <span class="radius-usage">Title badge, live indicator label</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────── -->
+    <!-- Components -->
+    <!-- ─────────────────────────────────── -->
+    <section class="section" id="components">
+      <p class="section-label">05 — Components</p>
+      <h2 class="section-title">Components</h2>
+      <p class="section-desc">Reference for all interactive and display elements. Each example uses only site variables.</p>
+      <hr class="divider" />
+
+      <!-- Buttons -->
+      <p class="demo-label">Buttons</p>
+      <div class="demo-row">
+        <a class="btn-primary" href="#">Primary Button</a>
+        <a class="btn-outline" href="#">Outline Button</a>
+        <a class="btn-nav" href="#">Say G'day</a>
+      </div>
+      <div class="dark-bg">
+        <a class="btn-on-dark" href="#">View Website</a>
+        <span style="font-size:13px; color:rgba(255,255,255,0.5);">On dark (project card hover)</span>
+      </div>
+
+      <!-- Tags -->
+      <p class="demo-label" style="margin-top:32px;">Tags / Badges</p>
+      <div class="demo-row">
+        <span class="tag-pill">Smart Coaster</span>
+        <span class="tag-pill">Free Dinner For One</span>
+        <span style="font-size:13px; color:var(--grey);">Used for page title labels</span>
+      </div>
+
+      <!-- Nav -->
+      <p class="demo-label" style="margin-top:32px;">Navigation</p>
+      <div class="nav-demo">
+        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link" href="#">About</a>
+        <a class="btn-nav" href="#">Say G'day</a>
+      </div>
+
+      <!-- Live Indicator -->
+      <p class="demo-label" style="margin-top:32px;">Live Indicator (Easter Egg)</p>
+      <div class="demo-row">
+        <div class="live-dot">
+          <span class="dot"></span>
+          <span class="live-label">3 online</span>
+        </div>
+        <span style="font-size:13px; color:var(--grey);">Fixed bottom-right. Hover reveals count. Links to /analytics.</span>
+      </div>
+
+      <!-- Cards -->
+      <p class="demo-label" style="margin-top:32px;">Analytics Card (Surface)</p>
+      <div class="demo-row" style="background:var(--background);">
+        <div class="card-demo">
+          <div class="card-demo-title">Top Countries</div>
+          <div class="card-demo-body">Background: <code>#faf7f0</code><br />Border: 1px rgba(0,0,0,0.06)<br />Padding: 24px 26px<br />Radius: 14px</div>
+        </div>
+        <div class="card-demo">
+          <div class="card-demo-title">Views by Page</div>
+          <div class="card-demo-body">Same card style. In bento grid, left card spans 2 rows (grid-row: span 2) to match combined height of right cards.</div>
+        </div>
+      </div>
+
+      <!-- Stat cards -->
+      <p class="demo-label" style="margin-top:32px;">Stat Cards</p>
+      <div class="demo-row" style="flex-wrap:wrap;">
+        <div class="stat-card-demo">
+          <div class="stat-number">48</div>
+          <div class="stat-label">Total Page Views</div>
+        </div>
+        <div class="stat-card-demo">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Unique Visitors</div>
+        </div>
+        <div class="stat-card-demo">
+          <div class="stat-number">1</div>
+          <div class="stat-label">External Project Clicks</div>
+        </div>
+        <span style="font-size:13px; color:var(--grey); align-self:center;">Background: --primary<br/>No box shadow.<br/>Radius: 14px</span>
+      </div>
+
+      <!-- Project card -->
+      <p class="demo-label" style="margin-top:32px;">Project Card</p>
+      <div class="demo-row" style="background:var(--background);">
+        <div class="project-card-demo">
+          <h3>Smart Coaster<br/>With Friends</h3>
+          <p>IoT · React · Firebase</p>
+          <a class="btn-on-dark" href="#" style="margin-top:8px;">View Website</a>
+        </div>
+        <span style="font-size:13px; color:var(--grey); max-width:300px;">Background: --primary<br/>Radius: 30px desktop / 16px mobile<br/>Hover reveals project info, image fades out.<br/>3-col → 2-col → 1-col grid.</span>
+      </div>
+
+    </section>
+
+    <!-- ─────────────────────────────────── -->
+    <!-- Breakpoints -->
+    <!-- ─────────────────────────────────── -->
+    <section class="section" id="breakpoints">
+      <p class="section-label">06 — Layout</p>
+      <h2 class="section-title">Breakpoints</h2>
+      <p class="section-desc">All breakpoints use <code>max-width</code>. Think mobile-last — desktop styles are the default, overrides apply downward.</p>
+      <hr class="divider" />
+
+      <div class="bp-list">
+        <div class="bp-row">
+          <span class="bp-width">≤1700px</span>
+          <span class="bp-name">Wide Desktop</span>
+          <span class="bp-desc">Project card inner container shrinks to reduce image whitespace</span>
+        </div>
+        <div class="bp-row">
+          <span class="bp-width">≤1300px</span>
+          <span class="bp-name">Desktop</span>
+          <span class="bp-desc">Project grid collapses from 3-col to 2-col</span>
+        </div>
+        <div class="bp-row">
+          <span class="bp-width">≤1024px</span>
+          <span class="bp-name">Tablet (large)</span>
+          <span class="bp-desc">Analytics stat row changes from 5-col to 3-col</span>
+        </div>
+        <div class="bp-row">
+          <span class="bp-width">≤900px</span>
+          <span class="bp-name">Tablet</span>
+          <span class="bp-desc">Analytics bento collapses to single column</span>
+        </div>
+        <div class="bp-row">
+          <span class="bp-width">≤768px</span>
+          <span class="bp-name">Tablet (small)</span>
+          <span class="bp-desc">Project grid → 1-col; side margins reduce to 20px; stat row → 2-col</span>
+        </div>
+        <div class="bp-row">
+          <span class="bp-width">≤425px</span>
+          <span class="bp-name">Mobile</span>
+          <span class="bp-desc"><strong>16px side padding on all pages.</strong> Font sizes reduce. Project card radius → 16px. Stat cards: 5th card spans full width.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────── -->
+    <!-- Box-in-Box -->
+    <!-- ─────────────────────────────────── -->
+    <section class="section" id="box-in-box">
+      <p class="section-label">07 — Rule</p>
+      <h2 class="section-title">Box-in-Box Radius</h2>
+      <p class="section-desc">When nesting a rounded element inside another rounded element, the inner radius must be reduced by the gap between them to keep the visual rhythm consistent. This prevents corners that look too sharp or too round relative to the outer container.</p>
+      <hr class="divider" />
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:24px 32px; margin-bottom:24px;">
+        <p style="font-size:15px; font-weight:600; color:var(--black); margin-bottom:6px;">Formula</p>
+        <code style="font-size:20px; color:var(--primary);">Outer R = Inner R + Padding</code>
+        <p style="font-size:13px; color:var(--grey); margin-top:6px; margin-bottom:12px;">Rearranged: <code style="font-size:15px; color:var(--primary);">Inner R = Outer R − Padding</code></p>
+        <p style="font-size:13px; color:var(--grey);">Where <strong>Padding</strong> is the gap between the outer element's inner edge and the inner element's edge.<br/>If Padding ≥ Outer R, the corners never overlap — the inner element's corners are in the flat zone, so Inner R = 0 (no rounding needed).</p>
+      </div>
+
+      <!-- Live demo -->
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; margin-bottom:32px;">
+
+        <div>
+          <p style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:var(--grey); margin-bottom:10px;">Project card (formula applies)</p>
+          <div style="background:var(--primary); border-radius:28px; padding:20px; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <div style="background:rgba(255,255,255,0.15); border-radius:8px; width:100%; height:60px;"></div>
+          </div>
+          <p style="font-size:12px; color:var(--grey); margin-top:8px;">Outer 28px · Padding 20px · Inner 8px — all breakpoints</p>
+        </div>
+
+        <div>
+          <p style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:var(--grey); margin-bottom:10px;">Medium gap (formula applies)</p>
+          <div style="background:var(--primary); border-radius:30px; padding:25px; display:flex; align-items:center; justify-content:center;">
+            <div style="background:rgba(255,255,255,0.15); border-radius:5px; width:100%; height:60px;"></div>
+          </div>
+          <p style="font-size:12px; color:var(--grey); margin-top:8px;">Outer 30px · Gap 25px · Inner 5px</p>
+        </div>
+
+        <div>
+          <p style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:var(--grey); margin-bottom:10px;">Small gap (overflow: hidden)</p>
+          <div style="background:var(--primary); border-radius:16px; padding:12px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+            <div style="background:rgba(255,255,255,0.15); border-radius:4px; width:100%; height:60px;"></div>
+          </div>
+          <p style="font-size:12px; color:var(--grey); margin-top:8px;">Outer 16px · Gap 12px · Inner 4px + overflow:hidden on outer</p>
+        </div>
+
+      </div>
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:20px 26px;">
+        <p style="font-size:13px; font-weight:600; color:var(--black); margin-bottom:10px;">Project card values (applied — all breakpoints)</p>
+        <table style="font-size:13px; border-collapse:collapse; width:100%;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:0 12px 10px 0; color:var(--grey); font-weight:500; border-bottom:1px solid #e5dfd3;">Element</th>
+              <th style="text-align:left; padding:0 12px 10px; color:var(--grey); font-weight:500; border-bottom:1px solid #e5dfd3;">Outer R</th>
+              <th style="text-align:left; padding:0 12px 10px; color:var(--grey); font-weight:500; border-bottom:1px solid #e5dfd3;">Padding</th>
+              <th style="text-align:left; padding:0 12px 10px; color:var(--grey); font-weight:500; border-bottom:1px solid #e5dfd3;">Inner R</th>
+              <th style="text-align:left; padding:0 0 10px; color:var(--grey); font-weight:500; border-bottom:1px solid #e5dfd3;">Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:10px 12px 10px 0;">Green project card → image</td>
+              <td style="padding:10px 12px; color:var(--primary); font-weight:600;">28px</td>
+              <td style="padding:10px 12px;">20px</td>
+              <td style="padding:10px 12px; color:var(--primary); font-weight:600;">8px</td>
+              <td style="padding:10px 0; color:var(--grey);">28 − 20 = 8 · consistent at all screen sizes</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:12px; color:var(--grey); margin-top:12px;">Padding is applied via <code>padding: 20px</code> on the card, not <code>calc(100% - Xpx)</code> — this keeps the formula constant and the code simple. <code>overflow: hidden</code> on the card clips any edge overlap.</p>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────── -->
+    <!-- Guidelines -->
+    <!-- ─────────────────────────────────── -->
+    <section class="section" id="guidelines">
+      <p class="section-label">08 — Guidelines</p>
+      <h2 class="section-title">Do &amp; Don't</h2>
+      <p class="section-desc">Design decisions that keep the site feeling cohesive.</p>
+      <hr class="divider" />
+
+      <div class="do-dont-grid" style="margin-bottom:20px;">
+        <div class="do-box">
+          <div class="do-label">Do</div>
+          <ul class="do-dont-text">
+            <li>Use <code>--background</code> (#f3eddf) for page backgrounds</li>
+            <li>Use <code>--surface</code> (#faf7f0) for cards and elevated UI</li>
+            <li>Keep 16px side padding on mobile across all pages</li>
+            <li>Use CSS grid with <code>gap</code> for spacing — avoid margin-bottom between siblings</li>
+            <li>Use <code>min-width: 0</code> on grid children to prevent content blowout</li>
+            <li>Apply <code>text-overflow: ellipsis</code> to long strings in tables</li>
+          </ul>
+        </div>
+        <div class="dont-box">
+          <div class="dont-label">Don't</div>
+          <ul class="do-dont-text">
+            <li>Use pure white (#fff) for page or card backgrounds</li>
+            <li>Use raw hex values in component CSS — always use variables</li>
+            <li>Use <code>margin: 0</code> on containers at mobile (removes all breathing room)</li>
+            <li>Add <code>box-shadow</code> to cards — the border + background contrast is enough</li>
+            <li>Expose Supabase keys with <code>NEXT_PUBLIC_</code> prefix — server-only only</li>
+            <li>Track IP addresses or personal data — use localStorage session IDs instead</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="do-dont-grid">
+        <div class="do-box">
+          <div class="do-label">Analytics Page Conventions</div>
+          <ul class="do-dont-text">
+            <li>Card titles: 16px / 600 weight, <code>--black</code></li>
+            <li>Use bento grid layout with <code>gap: 20px</code></li>
+            <li>Dividers between list rows: 1px <code>#e5dfd3</code></li>
+            <li>Bar track: <code>#e5dfd3</code> — bar fill: <code>--primary</code></li>
+            <li>Table headers: sticky, uppercase, 12px, <code>--grey</code></li>
+          </ul>
+        </div>
+        <div class="do-box">
+          <div class="do-label">Project Page Conventions</div>
+          <ul class="do-dont-text">
+            <li>Max-width 728px, centered with <code>margin: 0 auto</code></li>
+            <li>Title as a pill badge in <code>--primary</code></li>
+            <li>Article body: 18px / 400, line-height 27px</li>
+            <li>Section headings: 22px h2, 18px h3</li>
+            <li>Images full-width within container</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="guide-footer">
+    David Waite Portfolio — Style Guide · Last updated April 2026
+  </footer>
+
+</body>
+</html>
