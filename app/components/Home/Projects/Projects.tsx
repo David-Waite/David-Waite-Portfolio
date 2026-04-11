@@ -44,7 +44,7 @@ export default function Projects() {
                 <div>
                   <h2>{item.title}</h2>
                   <p>{item.cardDescription}</p>
-                  <p className={styles.linkContainer}>
+                  <div className={styles.linkContainer}>
                     {item.inLink ? (
                       <Link className={styles.link} href={item.inLink}>
                         View About
@@ -61,7 +61,7 @@ export default function Projects() {
                         View Website
                       </a>
                     )}
-                  </p>
+                  </div>
                 </div>
 
                 <ul className={styles.madeWith}>

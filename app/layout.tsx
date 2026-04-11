@@ -2,7 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NavBar from "./components/Nav/NavBar/NavBar";
-import Footer from "./components/Footer/Footer";
 import PageViewTracker from "./components/PageViewTracker/PageViewTracker";
 import LiveIndicator from "./components/Nav/LiveIndicator/LiveIndicator";
 
@@ -28,7 +27,6 @@ export default function RootLayout({
         <LiveIndicator />
         <NavBar />
         <div className="content">{children}</div>
-        <Footer />
       </body>
     </html>
   );

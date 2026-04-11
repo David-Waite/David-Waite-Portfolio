@@ -26,6 +26,7 @@
   z-index: 0;
   transition: 0.4s;
 }
+
 .projectInfo {
   position: absolute;
   top: 50%;
@@ -47,23 +48,32 @@
   color: var(--white);
   font-size: 18px;
   font-weight: 500;
+  line-height: 1.3;
 }
 
 .projectsCard p {
   font-size: 18px;
   text-align: center;
-  margin: 8px 30px 0 30px;
+  margin: 6px 0 0 0;
   color: var(--white);
   font-weight: 300;
+  line-height: 1.4;
 }
 
 .madeWith {
   list-style: none;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 8px;
   color: #a7a7a7;
   font-size: 14.4px;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.madeWith li {
+  white-space: nowrap;
 }
 
 .contaner:hover .projectImages {
@@ -76,8 +86,10 @@
 }
 
 .linkContainer {
-  padding-top: 16px;
+  padding-top: 12px;
+  text-align: center;
 }
+
 .link {
   text-align: center;
   border: 2px solid var(--white);
@@ -92,6 +104,7 @@
   color: var(--primary);
   background-color: var(--white);
 }
+
 @media (max-width: 1300px) {
   .projectsGrid {
     grid-template-columns: 1fr 1fr;
@@ -114,9 +127,17 @@
 }
 
 @media (max-width: 425px) {
-  .projectsCard p,
   .projectsCard h2 {
-    font-size: 16px;
+    font-size: 15px;
+  }
+
+  .projectsCard p {
+    font-size: 14px;
+    /* clamp to 3 lines so madeWith always stays visible */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .link {
@@ -124,10 +145,34 @@
   }
 
   .linkContainer {
-    padding-top: 8px;
+    padding-top: 6px;
   }
 
   .madeWith {
-    font-size: 12.8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .projectsCard h2 {
+    font-size: 14px;
+  }
+
+  .projectsCard p {
+    font-size: 13px;
+    -webkit-line-clamp: 2;
+  }
+
+  .link {
+    font-size: 11px;
+    padding: 3px 7px;
+  }
+
+  .linkContainer {
+    padding-top: 5px;
+  }
+
+  .madeWith {
+    font-size: 11px;
   }
 }
